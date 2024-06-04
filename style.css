@@ -1,26 +1,32 @@
 /* Footer */
 footer{
     background-color: #006899;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 footer div{
     text-decoration: underline;
     border-bottom: 1px solid white;
     padding:10px 0 10px 0 ;
+    
 }
 footer div a:first-child img{
     height: 17px;
-    width: 12px;
+    width: 15px;
+    margin-right: 5px;
 }  
 footer div a:nth-child(2) img{
     height: 20px;
     width: 20px;
+    margin-right: 5px;
 }  
 footer div a:last-child img{
     height: 17px;
     width: 17px;
+    margin-right: 5px;
 }  
-footer br + a{
+footer div+img+a{
     color: white;
     text-decoration: none;
 }
@@ -36,4 +42,14 @@ nav ul{
 nav ul li{
     font-size: 14px;
     margin: 0 15px !important;
+}
+.logo{
+    height: 109px;
+    width: 109px;
+}
+
+/* Filtre */
+section{
+    display: flex;
+    flex-direction: column;
 }
