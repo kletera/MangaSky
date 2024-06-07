@@ -25,18 +25,24 @@ p{
 a{
 
 } */
-
+.logo{
+    height: 100%;
+    width: auto;
+}
 /* Footer */
 footer{
     background-color: #006899;
+    height: 144px;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     text-align: center;
+    position:sticky;
 }
 footer ul{
     text-decoration: underline;
     border-bottom: 1px solid white;
-    padding:10px 0 10px 0 ;
+    padding-bottom:5px ;
     display: flex;
     margin: 0;
     justify-content: center;
@@ -46,27 +52,38 @@ footer ul{
 footer ul li:first-child img{
     height: 17px;
     width: 15px;
-    margin-right: 5px;
+    margin-right: 10px;
 }  
 footer ul li:nth-child(2) img{
     height: 20px;
     width: 20px;
-    margin-right: 5px;
+    margin-right: 10px;
 }  
 footer ul li:last-child img{
     height: 17px;
     width: 17px;
-    margin-right: 5px;
+    margin-right: 10px;
 }  
 footer ul+img+a{
     color: white;
     text-decoration: none;
 }
 
-/* Nav Bar */
-nav{
-    background: #64C7F5;
+/* Header+NavBar */
+header{
+    height: 66px;
+    width: 100%;
+    background-color: #64C7F5;
     display: flex;
+}
+header .logo{
+    float: left;
+}
+nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 nav ul{
     display: flex;
@@ -74,16 +91,48 @@ nav ul{
     margin: 0;
 }
 nav li{
-    font-size: 14px;
     margin: 0 15px !important;
     text-align: center;
-    padding-top: 10px;
-
+}
+nav li a:hover, nav li a:focus{
+    text-shadow: 0 0 10px #F5EF64, 0 0 20px #F5EF64, 0 0 40px #F5EF64;
+    color: #fff;
 }
 nav a{
+    font-size: 14px;
     text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    height: 66px;
+    width: auto;
 }
-.logo{
-    height: 70px;
-    width: 70px;
+
+/* Filtre */
+#bt_filtre{
+    background-color: #64C7F5;
+    border: #64C7F5;
+}
+.filtre{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #F3F5F7;
+    height: fit-content;
+    width:fit-content;
+    padding: 15px;
+}
+.genre_type_filtre{
+    display: flex;
+}
+.filtre label{
+    border: 2px solid #F56477;
+    border-radius: 5px;
+    background-color: white;
+}
+
+
+
+.filtre button{
+    background-color: #F56477;
+    margin-top: 15px;
 }
