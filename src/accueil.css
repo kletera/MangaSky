@@ -1,0 +1,21 @@
+.itemupdate{
+    text-decoration: none;
+}
+.itemupdate ul{
+    list-style: none;
+}
+.itemupdate li:active{
+    color: #f56477;
+}
+
+.bt_pg_suivante{
+    display: flex;
+    justify-content: center;
+}
+.bt_pg_suivante a{
+    color: #000;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin:5px 5px 5px 0;
+    border: 1px solid black;
+}
