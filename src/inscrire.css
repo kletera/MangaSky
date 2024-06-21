@@ -1,0 +1,113 @@
+body{
+    background-image: url(../Image/ciel_bleu_manga.jpg);
+    background-size: cover;
+}
+
+@media screen and (max-width: 500px){
+    body{
+        background-repeat: no-repeat;
+    }
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 16px;
+    margin: 0px 48px;
+}
+
+/* H1 */
+main h1{
+    text-transform: uppercase;
+    align-self: end;
+    text-align: left;
+    grid-column: 2 / span 6;
+}
+@media screen and (min-width: 1040px){
+    main h1{
+        font-size: 61.03px;
+    }
+}
+/* Article */
+article{
+    margin-top: 12%;
+    background-color: #64C7F5;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 32px;
+    min-height: 579px;
+    box-sizing: border-box;;
+}
+article div{
+    position:relative;
+}
+article a{
+    padding-left: 10px;
+    color:#F56477;
+    text-decoration: none;
+}
+article img{
+    height: 100px;
+    width: 100px;
+    align-self: center;
+}
+article input{
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    height: 48px;
+    padding-top: 12px;
+    padding-left: 15px;
+    width: 100%;
+    font-size: 12px;
+}
+article input[type="submit"]{
+    margin-top: 20px;
+    background-color: #F5EF64;
+}
+.label_incription label{
+    color: rgb(102, 102, 102);
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    font-size: 12.64px;
+    left: 16px;
+    top: 25px;
+    opacity: 1;
+    height: 17.33px;
+    pointer-events: none;
+}
+.label_incription span{
+    color: rgb(102, 102, 102);
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 100%;
+    font-size: 11.24px;
+    left: 8px;
+    top: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+@media screen and (min-width: 1280px){
+    article{
+        grid-column: 9 / span 4;
+    }
+    
+}
+
+/* Footer modification */
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.confidentialité{
+    padding-top: 4px;
+}

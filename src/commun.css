@@ -29,19 +29,23 @@ a{
     height: 100%;
     width: auto;
 }
+.dis_none{
+    display: none;
+}
 /* Footer */
 footer{
     background-color: #006899;
-    height: 144px;
+    max-height: 144px;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
     text-align: center;
-    position:sticky;
+
 }
 footer ul{
     text-decoration: underline;
     border-bottom: 1px solid white;
+    padding: 0;
     padding-bottom:5px ;
     display: flex;
     margin: 0;
@@ -64,9 +68,12 @@ footer ul li:last-child img{
     width: 17px;
     margin-right: 10px;
 }  
-footer ul a{
+footer a{
     color: white;
     text-decoration: none;
+}
+footer .logo{
+    height: 100px;
 }
 
 /* Header+NavBar */
