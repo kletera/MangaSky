@@ -101,7 +101,7 @@ nav li{
     margin: 0 15px !important;
     text-align: center;
 }
-nav li a:hover, nav li a:focus{
+.effect_nav li a:hover, .effect_nav li a:focus{
     text-shadow: 0 0 10px #F5EF64, 0 0 20px #F5EF64, 0 0 40px #F5EF64;
     color: #fff;
 }
@@ -113,6 +113,16 @@ nav a{
     align-items: center;
     height: 66px;
     width: auto;
+}
+.nav_end{
+    display: flex;
+}
+nav form{
+    align-items: end;
+}
+nav input[type="search"]{
+    border-radius: 5px;
+    border:none;
 }
 
 /* Filtre */
