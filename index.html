@@ -52,49 +52,61 @@
     <!-- Aside Manga Populaire -->
     <aside>
         <h2>Populaire</h2>
-        <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+        <ul class="">
+            <li><a href="">Semaine</a></li>
+            <li><a href="">Mensuel</a></li>
+            <li><a href="">Tous</a></li>
         </ul>
         <section>
+            <div class="border_number">1</div>
             <img src="" alt="">
             <h3><a href=""></a></h3>
             <div>
-                <p></p>
+                <h3></h3>
                 <a href=""></a>
                 <a href=""></a>
                 <a href=""></a>
             </div>
         </section>
         <section>
+            <div class="border_number">2</div>
             <img src="" alt="">
             <h3><a href=""></a></h3>
             <div>
-                <p></p>
+                <h3></h3>
                 <a href=""></a>
                 <a href=""></a>
                 <a href=""></a>
             </div>
         </section>
         <section>
+            <div class="border_number">3</div>
             <img src="" alt="">
             <h3><a href=""></a></h3>
             <div>
-                <p></p>
+                <h3></h3>
                 <a href=""></a>
                 <a href=""></a>
                 <a href=""></a>
             </div>
         </section>
         <section>
+            <div class="border_number">4</div>
             <img src="" alt="">
             <h3><a href=""></a></h3>
             <div>
-                <p></p>
+                <h3></h3>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </section>
+        <section>
+            <div class="border_number">5</div>
+            <img src="" alt="">
+            <h3><a href=""></a></h3>
+            <div>
+                <h3></h3>
                 <a href=""></a>
                 <a href=""></a>
                 <a href=""></a>
@@ -102,303 +114,353 @@
         </section>
     </aside>
     <main>
-        <h1>Dernieres publication</h1>
-        <!-- Filtre -->
-        <button id="bt_filtre" type="button">Filtre</button>
-        <section class="filtre">
-            <div class="genre_type_filtre">
-                <h4>Status:</h4>
-                <label for="tous">Tous</label>
-                <input type="checkbox" name="tous" id="tous">
-                <label for="cours">En cours</label>
-                <input type="checkbox" name="cours" id="cours">
-                <label for="terminer">Terminer</label>
-                <input type="checkbox" name="terminer" id="terminer">
-            </div>
-            
-            <div class="genre_type_filtre">
-                <h4>Type:</h4>
-                <label for="manga">Manga</label>
-                <input type="checkbox" name="manga" id="manga">
-                <label for="manhua">Manhua</label>
-                <input type="checkbox" name="manhua" id="manhua">
-                <label for="manhwa">Manhwa</label>
-                <input type="checkbox" name="manhwa" id="manhwa">
-                <label for="webtoon">Webtoon</label>
-                <input type="checkbox" name="webtoon" id="webtoon">
-            </div>
-            <div>
-                <h4>Genre:</h4>
-                <div>
-                    <input type="checkbox" name="action" id="action">
-                    <label for="action">Action</label>
-                    <input type="checkbox" name="aventure" id="aventure">
-                    <label for="aventure">Aventure</label>
-                    <input type="checkbox" name="comédie" id="comédie">
-                    <label for="comédie">Comédie</label>
-                    <input type="checkbox" name="rommance" id="rommance">
-                    <label for="rommance">Rommance</label>
+        <div>
+            <h1>Dernieres publication</h1>
+            <!-- Filtre -->
+            <button id="bt_filtre" type="button">Filtre</button>
+            <form class="filtre dis_none">
+                <div class="genre_type_filtre">
+                    <h4>Status:</h4>
+                    <label for="tous">
+                        <span>Tous</span>
+                        <input type="checkbox" name="tous" id="tous">
+                    </label>
+                    <label for="cours">
+                        <span>En cours</span>
+                        <input type="checkbox" name="cours" id="cours">
+                    </label>
+                    <label for="terminer">
+                        <span>Terminer</span>
+                        <input type="checkbox" name="terminer" id="terminer">
+                    </label>
+                </div>
+                
+                <div class="genre_type_filtre">
+                    <h4>Type:</h4>
+                    <label for="manga">
+                        <span>Manga</span>
+                        <input type="checkbox" name="manga" id="manga">
+                    </label>
+                    <label for="manhua">
+                        <span>Manhua</span>
+                        <input type="checkbox" name="manhua" id="manhua">
+                    </label>
+                    <label for="manhwa">
+                        <span>Manhwa</span>
+                        <input type="checkbox" name="manhwa" id="manhwa">
+                    </label>
+                    <label for="webtoon">
+                        <span>Webtoon</span>
+                        <input type="checkbox" name="webtoon" id="webtoon">
+                    </label>
                 </div>
                 <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Horreur</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Drame</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Historique</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Harem</label>
+                    <h4>Genre:</h4>
+                    <div class="grid_filtre">
+                        <label for="action">
+                            <input type="checkbox" name="action" id="action">
+                            <span>Action</span>
+                        </label>
+                        <label for="aventure">
+                        <input type="checkbox" name="aventure" id="aventure">
+                        <span>Aventure</span>
+                        </label>
+                        <label for="comédie">
+                            <input type="checkbox" name="comédie" id="comédie">
+                            <span>Comédie</span> 
+                        </label>
+                        <label for="rommance">
+                            <input type="checkbox" name="rommance" id="rommance">
+                            <span>Rommance</span>
+                        </label>
+                        <label for="Horreur">
+                            <input type="checkbox" name="Horreur" id="Horreur">
+                            <span>Horreur</span>
+                        </label>
+                        <label for="Drame">
+                            <input type="checkbox" name="Drame" id="Drame">
+                            <span>Drame</span>
+                        </label>
+                        <label for="Historique">
+                            <input type="checkbox" name="Historique" id="Historique">
+                            <span>Historique</span>
+                        </label>
+                        <label for="Harem">
+                            <input type="checkbox" name="Harem" id="Harem">
+                            <span>Harem</span>
+                        </label>
+
+                        <label for="Shonen">
+                            <input type="checkbox" name="Shonen" id="Shonen">
+                            <span>Shonen</span>
+                        </label>
+                        <label for="Seinen">
+                            <input type="checkbox" name="Seinen" id="Seinen">
+                            <span>Seinen</span>
+                        </label>
+                        <label for="Shojo">
+                            <input type="checkbox" name="Shojo" id="Shojo">
+                            <span>Shojo</span>
+                        </label>
+                        <label for="life">
+                            <input type="checkbox" name="life" id="life">
+                            <span>Tranche de vie</span>
+                        </label>
+
+                        <label for="Fantaisie">
+                            <input type="checkbox" name="Fantaisie" id="Fantaisie">
+                            <span>Fantaisie</span>
+                        </label>
+                        <label for="Surnaturel">
+                            <input type="checkbox" name="Surnaturel" id="Surnaturel">
+                            <span>Surnaturel</span>
+                        </label>
+                        <label for="Martial">
+                            <input type="checkbox" name="Martial" id="Martial">
+                            <span>Martial Art</span>
+                        </label>
+                        <label for="Isekai">
+                            <input type="checkbox" name="Isekai" id="Isekai">
+                            <span>Isekai</span>
+                        </label>
+
+                        <label for="Sport">
+                            <input type="checkbox" name="Sport" id="Sport">
+                            <span>Sport</span>
+                        </label>
+                        <label for="Scool">
+                            <input type="checkbox" name="Scool" id="Scool">
+                            <span>Scool life</span>
+                        </label>
+                        <label for="Médical">
+                            <input type="checkbox" name="Médical" id="Médical">
+                            <span>Médical</span>
+                        </label>
+                        <label for="Cuisine">
+                            <input type="checkbox" name="Cuisine" id="Cuisine">
+                            <span>Cuisine</span>
+                        </label>
+
+                        <label for="Mécha">
+                            <input type="checkbox" name="Mécha" id="Mécha">
+                            <span>Mécha</span>
+                        </label>
+                        <label for="fiction">
+                            <input type="checkbox" name="fiction" id="fiction">
+                            <span>Science-fiction</span>
+                        </label>
+                        <label for="Mysthère">
+                            <input type="checkbox" name="Mysthère" id="Mysthère">
+                            <span>Mysthère</span>
+                        </label>
+                        <label for="Psychologique">
+                            <input type="checkbox" name="Psychologique" id="Psychologique">
+                            <span>Psychologique</span>
+                        </label>
+                    </div>
+                    <button type="button">GO</button>
                 </div>
-                <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Shonen</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Seinen</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Shojo</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Tranche de vie</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Fantaisie</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Surnaturel</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Martial Art</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Isekai</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Sport</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Scool life</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Médical</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Cuisine</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Mécha</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Science-fiction</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Mysthère</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Psychologique</label>
-                </div>
-                <button type="button">Go</button>
-            </div>
-        </section>
+            </form>
+        </div>
         <!-- Article -->
-        <section>
+        <section class="article_manga">
             <article class="itemupdate">
                 <a href="">
-                    <img src="" alt="" titre="">
+                    <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                 </a>
+                <h3>One Piece</h3>
                 <ul>
                     <li>
-                        <a href=""><h3></h3></a>
+                        <a href="">Chapitre 1118</a>
+                        <span>20 heures</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                        <i></i>
+                        <a href="">Chapitre 1118</a>
+                        <span>2 jours</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
+                        <a href="">Chapitre 1118</a>
+                        <span>1 semaines</span>
                     </li>
                 </ul>
             </article>
             <article class="itemupdate">
                 <a href="">
-                    <img src="" alt="" titre="">
+                    <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                 </a>
+                <h3>One Piece</h3>
                 <ul>
                     <li>
-                        <a href=""><h3></h3></a>
+                        <a href="">Chapitre 1118</a>
+                        <span>20 heures</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                        <i></i>
+                        <a href="">Chapitre 1118</a>
+                        <span>2 jours</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
+                        <a href="">Chapitre 1118</a>
+                        <span>1 semaines</span>
                     </li>
                 </ul>
             </article>
             <article class="itemupdate">
                 <a href="">
-                    <img src="" alt="" titre="">
+                    <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                 </a>
+                <h3>One Piece</h3>
                 <ul>
                     <li>
-                        <a href=""><h3></h3></a>
+                        <a href="">Chapitre 1118</a>
+                        <span>20 heures</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                        <i></i>
+                        <a href="">Chapitre 1118</a>
+                        <span>2 jours</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                    </li>
-                </ul>
-            </article >
-            <article class="itemupdate">
-                <a href="">
-                    <img src="" alt="" titre="">
-                </a>
-                <ul>
-                    <li>
-                        <a href=""><h3></h3></a>
-                    </li>
-                    <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                        <i></i>
-                    </li>
-                    <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
+                        <a href="">Chapitre 1118</a>
+                        <span>1 semaines</span>
                     </li>
                 </ul>
             </article>
             <article class="itemupdate">
                 <a href="">
-                    <img src="" alt="" titre="">
+                    <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                 </a>
+                <h3>One Piece</h3>
                 <ul>
                     <li>
-                        <a href=""><h3></h3></a>
+                        <a href="">Chapitre 1118</a>
+                        <span>20 heures</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                        <i></i>
+                        <a href="">Chapitre 1118</a>
+                        <span>2 jours</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
+                        <a href="">Chapitre 1118</a>
+                        <span>1 semaines</span>
                     </li>
                 </ul>
             </article>
             <article class="itemupdate">
                 <a href="">
-                    <img src="" alt="" titre="">
+                    <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                 </a>
+                <h3>One Piece</h3>
                 <ul>
                     <li>
-                        <a href=""><h3></h3></a>
+                        <a href="">Chapitre 1118</a>
+                        <span>20 heures</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                        <i></i>
+                        <a href="">Chapitre 1118</a>
+                        <span>2 jours</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
+                        <a href="">Chapitre 1118</a>
+                        <span>1 semaines</span>
                     </li>
                 </ul>
             </article>
             <article class="itemupdate">
                 <a href="">
-                    <img src="" alt="" titre="">
+                    <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                 </a>
+                <h3>One Piece</h3>
                 <ul>
                     <li>
-                        <a href=""><h3></h3></a>
+                        <a href="">Chapitre 1118</a>
+                        <span>20 heures</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                        <i></i>
+                        <a href="">Chapitre 1118</a>
+                        <span>2 jours</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
+                        <a href="">Chapitre 1118</a>
+                        <span>1 semaines</span>
                     </li>
                 </ul>
             </article>
             <article class="itemupdate">
                 <a href="">
-                    <img src="" alt="" titre="">
+                    <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                 </a>
+                <h3>One Piece</h3>
                 <ul>
                     <li>
-                        <a href=""><h3></h3></a>
+                        <a href="">Chapitre 1118</a>
+                        <span>20 heures</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
-                        <i></i>
+                        <a href="">Chapitre 1118</a>
+                        <span>2 jours</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
+                        <a href="">Chapitre 1118</a>
+                        <span>1 semaines</span>
+                    </li>
+                </ul>
+            </article>
+            <article class="itemupdate">
+                <a href="">
+                    <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
+                </a>
+                <h3>One Piece</h3>
+                <ul>
+                    <li>
+                        <a href="">Chapitre 1118</a>
+                        <span>20 heures</span>
                     </li>
                     <li>
-                        <span>
-                            <a href=""></a>
-                        </span>
+                        <a href="">Chapitre 1118</a>
+                        <span>2 jours</span>
+                    </li>
+                    <li>
+                        <a href="">Chapitre 1118</a>
+                        <span>1 semaines</span>
+                    </li>
+                </ul>
+            </article>
+            <article class="itemupdate">
+                <a href="">
+                    <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
+                </a>
+                <h3>One Piece</h3>
+                <ul>
+                    <li>
+                        <a href="">Chapitre 1118</a>
+                        <span>20 heures</span>
+                    </li>
+                    <li>
+                        <a href="">Chapitre 1118</a>
+                        <span>2 jours</span>
+                    </li>
+                    <li>
+                        <a href="">Chapitre 1118</a>
+                        <span>1 semaines</span>
+                    </li>
+                </ul>
+            </article>
+            <article class="itemupdate">
+                <a href="">
+                    <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
+                </a>
+                <h3>One Piece</h3>
+                <ul>
+                    <li>
+                        <a href="">Chapitre 1118</a>
+                        <span>20 heures</span>
+                    </li>
+                    <li>
+                        <a href="">Chapitre 1118</a>
+                        <span>2 jours</span>
+                    </li>
+                    <li>
+                        <a href="">Chapitre 1118</a>
+                        <span>1 semaines</span>
                     </li>
                 </ul>
             </article>

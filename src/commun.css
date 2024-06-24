@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
+/* Police */
 @font-face {
     font-family: 'Manga Temple';
     src: url(Font/manga_temple/mangat.ttf);
@@ -25,6 +26,7 @@ p{
 a{
 
 } */
+ /* logo + diplay répétitif pour JS */
 .logo{
     height: 100%;
     width: auto;
@@ -32,6 +34,7 @@ a{
 .dis_none{
     display: none;
 }
+
 /* Footer */
 footer{
     background-color: #006899;
@@ -51,7 +54,6 @@ footer ul{
     margin: 0;
     justify-content: center;
     list-style: none;
-    
 }
 footer ul li:first-child img{
     height: 17px;
@@ -125,11 +127,14 @@ nav input[type="search"]{
     border:none;
 }
 
-/* Filtre */
+/* bt Filtre */
 #bt_filtre{
     background-color: #64C7F5;
     border: #64C7F5;
+    padding: 10px;
+    margin-bottom: 10px;
 }
+/* Filtre */
 .filtre{
     border: 1px solid black;
     border-radius: 5px;
@@ -138,18 +143,37 @@ nav input[type="search"]{
     width:fit-content;
     padding: 15px;
 }
+/* Genre + Type filtre */
 .genre_type_filtre{
     display: flex;
+    padding: 10px 0;
 }
-.filtre label{
+.genre_type_filtre label{
+    padding-right: 10px;
+}
+.genre_type_filtre h4{
+    margin: 0;
+    padding-right: 10px;
+}
+.filtre label span{
     border: 2px solid #F56477;
     border-radius: 5px;
     background-color: white;
+    padding: 2px;
 }
-
-
-
+/* Submit filtre */
 .filtre button{
     background-color: #F56477;
     margin-top: 15px;
+}
+/* Filtre Genre */
+.grid_filtre{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 120px;
+}
+.grid_filtre label{
+    margin-right: 10px;
+    margin-bottom: 10px;
 }

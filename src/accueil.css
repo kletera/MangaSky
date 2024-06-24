@@ -1,13 +1,7 @@
-.itemupdate{
-    text-decoration: none;
-}
-.itemupdate ul{
-    list-style: none;
-}
-.itemupdate li:active{
-    color: #f56477;
-}
 
+*{
+    box-sizing: border-box;
+}
 .bt_pg_suivante{
     display: flex;
     justify-content: center;
@@ -18,4 +12,56 @@
     padding: 8px 12px;
     margin:5px 5px 5px 0;
     border: 1px solid black;
+}
+
+/* Article manga */
+/* 2 technique float left ou display grid */
+.article_manga{
+    width: 50%;
+    margin: auto;
+}
+.itemupdate{
+    text-decoration: none;
+    float: left;
+    padding: 15px 10px;
+    overflow: hidden;
+    position: relative;
+}
+.itemupdate ul{
+    list-style: none;
+}
+.itemupdate ul li{
+    display: block;
+}
+.itemupdate ul li a{
+    text-decoration: none;
+    color: #000;
+    padding-right: 20px;
+}
+.itemupdate li a:visited{
+    color: #f56477;
+}
+.itemupdate img{
+    width: 100px;
+    float: left;
+    padding-right: 10px;
+}
+
+/* aside populaire */
+aside{
+    width: 30%;
+    float: right;
+    background-color: #F5EF64;
+    border-radius: 10px;
+}
+aside section{
+    display: flex;
+}
+aside ul{
+    list-style: none;
+}
+.border_number{
+    padding: 10px;
+    border: 2px solid black;
+    margin: auto;
 }

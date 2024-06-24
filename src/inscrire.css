@@ -1,31 +1,91 @@
 body{
     background-image: url(../Image/ciel_bleu_manga.jpg);
     background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 500px){
-    body{
-        background-repeat: no-repeat;
-    }
-}
-
+/* Main */
 main{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 16px;
     margin: 0px 48px;
 }
+@media screen and (min-width: 400px){
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 16px;
+        margin: 0px 16px;
+    }
+}
+@media screen and (min-width: 640px){
+    main {
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 16px;
+        margin: 0px 16px;
+    }
+}
+@media screen and (min-width: 1040px){
+    main {
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 16px;
+        margin: 0px 24px;
+    }
+}
+@media screen and (min-width: 1280px){
+    main {
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 16px;
+        margin: 0px 48px;
+    }
+}
+@media screen and (min-width: 1560px){
+    main{
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 24px;
+        margin: 0px 72px;
+    }
+}
+
 
 /* H1 */
-main h1{
+.grid_h1{
+    grid-column: 1 / span 4;
+}
+@media screen and (min-width: 640px){
+    .grid_h1 {
+        grid-column: 2 / span 6;
+    }
+}
+@media screen and (min-width: 1040px){
+    .grid_h1 {
+        align-self: end;
+        text-align: left;
+        grid-column: 2 / span 6;
+    }
+}
+.grid_h1 h1{
     text-transform: uppercase;
     align-self: end;
-    text-align: left;
     grid-column: 2 / span 6;
+}
+@media screen and (min-width:  400px){
+    main h1{
+        font-size: 25.63px;
+        text-align: center;
+    }
+}
+@media screen and (min-width:  640px){
+    main h1{
+        font-size: 25.63px;
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1040px){
     main h1{
         font-size: 61.03px;
+        text-align: left;
     }
 }
 /* Article */
@@ -39,6 +99,7 @@ article{
     padding: 32px;
     min-height: 579px;
     box-sizing: border-box;;
+    grid-column: 9 / span 4;
 }
 article div{
     position:relative;
@@ -94,12 +155,32 @@ article input[type="submit"]{
     pointer-events: none;
     transform: translateY(-50%);
 }
+@media screen and (min-width: 400px){
+    article{
+    grid-column: 1 / span 4;
+    }
+}
+@media screen and (min-width: 640px){
+    article{
+    grid-column: 2 / span 6;
+    }
+}
+@media screen and (min-width: 1040px){
+    article{
+    grid-column: 8 / span 5;
+    }
+}
 @media screen and (min-width: 1280px){
     article{
         grid-column: 9 / span 4;
     }
-    
 }
+@media screen and (min-width: 1560px){
+    article{
+        grid-column: 9 / span 4;
+    }
+}
+
 
 /* Footer modification */
 footer{
