@@ -2,36 +2,45 @@
 *{
     box-sizing: border-box;
 }
-.bt_pg_suivante{
-    display: flex;
-    justify-content: center;
-}
-.bt_pg_suivante a{
-    color: #000;
-    text-decoration: none;
-    padding: 8px 12px;
-    margin:5px 5px 5px 0;
-    border: 1px solid black;
+
+/* conteneur */
+.container{
+    width: 70%;
+    margin:auto;
 }
 
 /* Article manga */
 /* 2 technique float left ou display grid */
+main{
+    float: left;
+    width: 70%;
+}
 .article_manga{
-    width: 50%;
     margin: auto;
 }
 .itemupdate{
     text-decoration: none;
+    margin: auto;
     float: left;
+    width: 50%;
     padding: 15px 10px;
     overflow: hidden;
     position: relative;
+}
+.itemupdate a{
+    text-decoration: none;
+}
+.itemupdate h3{
+    margin: 0;
+    color: #000;
 }
 .itemupdate ul{
     list-style: none;
 }
 .itemupdate ul li{
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
 }
 .itemupdate ul li a{
     text-decoration: none;
@@ -47,6 +56,19 @@
     padding-right: 10px;
 }
 
+/* bouton suivant */
+.bt_pg_suivante{
+    clear: both;
+    display: flex;
+    justify-content: center;
+}
+.bt_pg_suivante a{
+    color: #000;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin:5px 5px 5px 0;
+    border: 1px solid black;
+}
 /* aside populaire */
 aside{
     width: 30%;
@@ -54,14 +76,27 @@ aside{
     background-color: #F5EF64;
     border-radius: 10px;
 }
-aside section{
+.calendrier{
     display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+aside a{
+    text-decoration: none;
+    color: #000;
 }
 aside ul{
     list-style: none;
+    display: flex;
 }
 .border_number{
     padding: 10px;
     border: 2px solid black;
     margin: auto;
+}
+.aside_section{
+    display: flex;
+}
+.aside_section img{
+    height: 100px;
 }

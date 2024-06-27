@@ -37,8 +37,9 @@ a{
 
 /* Footer */
 footer{
+    width:100%;
     background-color: #006899;
-    max-height: 144px;
+    max-height: 165px;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
