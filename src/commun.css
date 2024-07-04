@@ -95,10 +95,11 @@ nav{
     display: flex;
     justify-content: space-between;
 }
-nav ul{
+.effect_nav, .ConnexionInscription {
     display: flex;
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 nav li{
     margin: 0 15px !important;
@@ -120,12 +121,25 @@ nav a{
 .nav_end{
     display: flex;
 }
-nav form{
-    align-items: end;
+.nav_end .rechercher{
+    align-self: center;
+    padding: 10px 0;
 }
-nav input[type="search"]{
-    border-radius: 5px;
+.rechercher img{
+    cursor: pointer;
+    position: absolute;
+
+}
+.rechercher input{
+    border-radius: 10px;
     border:none;
+    padding: 10px;
+    width: 25px;
+    height: 40px;
+    margin: 0 10px;
+}
+.themeSwich{
+    align-self: center;
 }
 
 /* bt Filtre */
