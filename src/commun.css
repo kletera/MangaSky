@@ -123,7 +123,6 @@ nav a{
 }
 .nav_end .rechercher{
     align-self: center;
-    padding: 10px 0;
 }
 .rechercher img{
     cursor: pointer;
@@ -141,26 +140,27 @@ nav a{
     width: 35px;
     height: 40px;
     margin: 0 10px;
+    transition: all 0.5s ease-out;
 }
 .rechercher input:focus{
     width: 200px;
     padding-left: 32px;
     transition: all 0.5s ease-out;
 }
+/* Swich mod */
 .themeSwich{
     align-self: center;
 }
-/* Swich Night mode */
-@media (prefers-color-scheme: dark) {
-    body {
-    background-color: #1c1c1e;
-    
-    }
-    main{
-        color: #fefefe;
-    }
+.themeSwich button{
+    background-color: #fff;
+    border:0.5px solid black;
+    border-radius: 10px;
+    padding: 5px;
 }
-
+.dark_mode{
+    background-color: #1c1c1e;
+    color: #fefefe;
+}
 
 /* bt Filtre */
 #bt_filtre{
