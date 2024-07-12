@@ -11,21 +11,18 @@ body{
     font-family: 'Liberation Sans';
     src: url(Font/liberation_sans/LiberationSans-Regular.ttf);
 }
-/* h1{
-    
+h1{
+    font-family: 'Manga Temple';
 }
 h2{
-
+    font-family: 'Manga Temple';
 }
 h3{
-
+    font-family: 'Manga Temple';
 }
 p{
-
+    font-family: 'Liberation Sans';
 }
-a{
-
-} */
  /* logo + diplay répétitif pour JS */
 .logo{
     height: 100%;
@@ -111,6 +108,7 @@ nav li{
 }
 nav a{
     font-size: 14px;
+    font-family: 'Manga Temple';
     text-decoration: none;
     color: black;
     display: flex;
