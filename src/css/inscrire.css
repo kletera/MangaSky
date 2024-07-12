@@ -1,5 +1,5 @@
 body{
-    background-image: url(../Image/ciel_bleu_manga.jpg);
+    background-image: url(../../Image/ciel_bleu_manga.jpg);
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;
@@ -67,9 +67,9 @@ main{
     }
 }
 .grid_h1 h1{
+    font-family: 'Liberation Sans';
     text-transform: uppercase;
     align-self: end;
-    grid-column: 2 / span 6;
 }
 @media screen and (min-width:  400px){
     main h1{

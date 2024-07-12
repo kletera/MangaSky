@@ -160,6 +160,14 @@ nav a{
     color: #fefefe;
 }
 
+@media screen and (max-width: 940px){
+    nav{
+        display: none;
+    }
+}
+
+
+
 /* bt Filtre */
 #bt_filtre{
     background-color: #64C7F5;
