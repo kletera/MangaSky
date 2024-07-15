@@ -76,7 +76,7 @@ footer .logo{
     height: 100px;
 }
 
-/* Header+NavBar */
+/* Header+Nav1 */
 header{
     height: 66px;
     width: 100%;
@@ -86,11 +86,12 @@ header{
 header .logo{
     float: left;
 }
-nav{
+.navBare{
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    visibility:visible;
 }
 .effect_nav, .ConnexionInscription {
     display: flex;
@@ -98,7 +99,7 @@ nav{
     margin: 0;
     padding: 0;
 }
-nav li{
+.navBare li{
     margin: 0 15px !important;
     text-align: center;
 }
@@ -106,7 +107,7 @@ nav li{
     text-shadow: 0 0 10px #F5EF64, 0 0 20px #F5EF64, 0 0 40px #F5EF64;
     color: #fff;
 }
-nav a{
+.navBare a{
     font-size: 14px;
     font-family: 'Manga Temple';
     text-decoration: none;
@@ -160,9 +161,34 @@ nav a{
     color: #fefefe;
 }
 
+/* Nav2 */
+.burger{
+    visibility:hidden;
+}
+#menuBurger{
+    background-color: grey;
+    border-radius: 10px;
+}
+#menuBurger:hover{
+    opacity: 0.5;
+}
+.sideBard ul{
+    list-style: none;
+}
+
+
+
+
+
 @media screen and (max-width: 940px){
-    nav{
-        display: none;
+    header{
+        justify-content: space-between;
+    }
+    .navBare{
+        visibility: hidden;
+    }
+    .burger{
+        visibility: visible;
     }
 }
 
