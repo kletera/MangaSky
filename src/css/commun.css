@@ -131,7 +131,7 @@ header .logo{
     pointer-events: none;
 
 }
-.rechercher input{
+.nav_end .rechercher input{
     cursor: pointer;
     border-radius: 10px;
     border:none;
@@ -141,7 +141,7 @@ header .logo{
     margin: 0 10px;
     transition: all 0.5s ease-out;
 }
-.rechercher input:focus{
+.rechercher input:focus, .sideBard .rechercher{
     width: 200px;
     padding-left: 32px;
     transition: all 0.5s ease-out;
@@ -172,15 +172,49 @@ header .logo{
 #menuBurger:hover{
     opacity: 0.5;
 }
+.sideBard{
+    z-index: 1;
+    background-color: #fff;
+    width: 320px;
+    transition: 1s;
+}
+.sideBard a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+.sideBard .rechercher img{
+    left: 25px;
+    top: 34px;
+}
+.sideBard .rechercher input{
+    cursor: pointer;
+    border-radius: 10px;
+    height: 40px;
+    margin: 0 10px;
+}
 .sideBard ul{
     list-style: none;
+}
+.sideBard ul li{
+    padding: 5px 0;
+    border-radius: 5px;
+}
+.barreYellow{
+    background-color: #F5EF64;
+}
+
+.sideBard ul div{
+    display: flex;
+}
+.sideBard ul div li{
+    padding-right: 5px;
 }
 
 
 
 
-
-@media screen and (max-width: 940px){
+@media screen and (max-width: 957px){
     header{
         justify-content: space-between;
     }
