@@ -5,11 +5,11 @@ body{
 /* Police */
 @font-face {
     font-family: 'Manga Temple';
-    src: url(Font/manga_temple/mangat.ttf);
+    src: url(../../Font/manga_temple/mangat.ttf);
 }
 @font-face {
     font-family: 'Liberation Sans';
-    src: url(Font/liberation_sans/LiberationSans-Regular.ttf);
+    src: url(../../Font/liberation_sans/LiberationSans-Regular.ttf);
 }
 h1{
     font-family: 'Manga Temple';
@@ -22,6 +22,9 @@ h3{
 }
 p{
     font-family: 'Liberation Sans';
+}
+nav a{
+    font-family: 'Manga Temple';
 }
  /* logo + diplay répétitif pour JS */
 .logo{
@@ -91,7 +94,6 @@ header .logo{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    visibility:visible;
 }
 .effect_nav, .ConnexionInscription {
     display: flex;
@@ -109,7 +111,6 @@ header .logo{
 }
 .navBare a{
     font-size: 14px;
-    font-family: 'Manga Temple';
     text-decoration: none;
     color: black;
     display: flex;
@@ -163,18 +164,24 @@ header .logo{
 
 /* Nav2 */
 .burger{
-    visibility:hidden;
+    display: none;
 }
 #menuBurger{
-    background-color: grey;
+    height: 35px;
+    background-color: #F5EF64;
     border-radius: 10px;
+    align-self: center;
+    margin: 0 30px;
+    padding:2px;
 }
 #menuBurger:hover{
-    opacity: 0.5;
+    opacity: 0.8;
 }
 .sideBard{
-    z-index: 1;
-    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #64C7F5;
     width: 320px;
     transition: 1s;
 }
@@ -192,6 +199,7 @@ header .logo{
     border-radius: 10px;
     height: 40px;
     margin: 0 10px;
+    transition: none;
 }
 .sideBard ul{
     list-style: none;
@@ -219,10 +227,10 @@ header .logo{
         justify-content: space-between;
     }
     .navBare{
-        visibility: hidden;
+        display: none;
     }
     .burger{
-        visibility: visible;
+        display: flex;
     }
 }
 
