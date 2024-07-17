@@ -190,6 +190,26 @@ header .logo{
     text-align: center;
     color: black;
 }
+.close{
+    background-image: url(../../Image/Icons/téléchargement\ \(1\).png);
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+}
+.close:hover{
+    
+    background-image:url(../../Image/Icons/téléchargement.png);
+    background-size: cover;
+}
+.sideBard .rechercher{
+    margin-top: 35px;
+}
 .sideBard .rechercher img{
     left: 25px;
     top: 34px;
