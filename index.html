@@ -58,23 +58,23 @@
             <img src="./Image/Icons/menu_25dp_000000_FILL1_wght400_GRAD0_opsz24.png" alt="Menu Burger" id="menuBurger">
             <div class="sideBard">
                 <button type="button" class="close"></button>
-                <form class="rechercher">
+                <form class="rechercher" style="width: 100%;">
                     <img src="./Image/Icons/pngegg.png" alt="Item Rechercher">
                     <input type="search" name="search" id="search">
                 </form>
                 <ul>
-                    <li>
+                    <li class="navDecoration">
                         <a href="./index.html">Accueil</a>
                     </li>
-                    <li>
+                    <li class="navDecoration">
                         <div class="barreYellow"></div>
                         <a href="">Nouveau</a>
                     </li>
-                    <li>
+                    <li class="navDecoration">
                         <div class="barreYellow"></div>
                         <a href="">Random</a>
                     </li>
-                    <li>
+                    <li class="navDecoration">
                         <div class="barreYellow"></div>
                         <a href="">Populaire</a>
                     </li>
@@ -102,15 +102,15 @@
             <section class="aside_section">
                 <div class="border_number">1</div>
                 <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="">
-                <div>
-                    <h3><a href="">One Piece</a></h3>
-                    <ul>
+                <ul class="asideUl">
+                    <li><h3 style="margin: 0;"><a href="">One Piece</a></h3></li>
+                    <div class="genreAside">
                         <li>Genre:</li>
-                        <li><a href="">Action</a></li>
-                        <li><a href="">Aventure</a></li>
-                        <li><a href="">Shonen</a></li>
-                    </ul>
-                </div>
+                        <li><a href="">Action,</a></li>
+                        <li><a href="">Aventure,</a></li>
+                        <li><a href="">Shonen,</a></li>
+                    </div>
+                </ul>
             </section>
             <section class="aside_section">
                 <div class="border_number">2</div>
@@ -161,20 +161,20 @@
             <h1>Dernieres publication</h1>
             <!-- Filtre -->
             <button id="bt_filtre" type="button">Filtre</button>
-            <form class="filtre dis_none">
+            <form class="filtre">
                     <div class="genre_type_filtre">
                         <h4>Status:</h4>
                         <label for="tous">
                             <span>Tous</span>
-                            <input type="checkbox" name="tous" id="tous">
+                            <input type="checkbox" name="tous" id="tous" value="tous">
                         </label>
-                        <label for="cours">
+                        <label for="encours">
                             <span>En cours</span>
-                            <input type="checkbox" name="cours" id="cours">
+                            <input type="checkbox" name="encours" id="encours" value="encours">
                         </label>
                         <label for="terminer">
                             <span>Terminer</span>
-                            <input type="checkbox" name="terminer" id="terminer">
+                            <input type="checkbox" name="terminer" id="terminer" value="terminer">
                         </label>
                     </div>
                     
@@ -250,23 +250,6 @@
                                 <span>Tranche de vie</span>
                             </label>
 
-                            <label for="Fantaisie">
-                                <input type="checkbox" name="Fantaisie" id="Fantaisie">
-                                <span>Fantaisie</span>
-                            </label>
-                            <label for="Surnaturel">
-                                <input type="checkbox" name="Surnaturel" id="Surnaturel">
-                                <span>Surnaturel</span>
-                            </label>
-                            <label for="Martial">
-                                <input type="checkbox" name="Martial" id="Martial">
-                                <span>Martial Art</span>
-                            </label>
-                            <label for="Isekai">
-                                <input type="checkbox" name="Isekai" id="Isekai">
-                                <span>Isekai</span>
-                            </label>
-
                             <label for="Sport">
                                 <input type="checkbox" name="Sport" id="Sport">
                                 <span>Sport</span>
@@ -282,6 +265,23 @@
                             <label for="Cuisine">
                                 <input type="checkbox" name="Cuisine" id="Cuisine">
                                 <span>Cuisine</span>
+                            </label>
+
+                            <label for="Fantaisie">
+                                <input type="checkbox" name="Fantaisie" id="Fantaisie">
+                                <span>Fantaisie</span>
+                            </label>
+                            <label for="Surnaturel">
+                                <input type="checkbox" name="Surnaturel" id="Surnaturel">
+                                <span>Surnaturel</span>
+                            </label>
+                            <label for="Martial">
+                                <input type="checkbox" name="Martial" id="Martial">
+                                <span>Martial Art</span>
+                            </label>
+                            <label for="Isekai">
+                                <input type="checkbox" name="Isekai" id="Isekai">
+                                <span>Isekai</span>
                             </label>
 
                             <label for="Mécha">
@@ -309,10 +309,14 @@
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
-                    
-                        <h3>One Piece</h3>
                     </a>
+                    
                     <ul>
+                        <li>
+                            <a href="./manga.html">
+                                <h3>One Piece</h3>
+                            </a>
+                        </li>
                         <li>
                             <a href="">Chapitre 1118</a>
                             <span>20 heures</span>

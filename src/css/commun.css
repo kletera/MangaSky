@@ -178,12 +178,17 @@ header .logo{
     opacity: 0.8;
 }
 .sideBard{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color: #64C7F5;
-    width: 320px;
-    transition: 1s;
+    padding: 25px;
+    height: 100%;
+    width: 484px;
+    text-align: left;
+    transition: transform 300ms;
+    font-size: 14px;
+    z-index: 2;
 }
 .sideBard a{
     text-decoration: none;
@@ -195,12 +200,10 @@ header .logo{
     width: 40px;
     height: 40px;
     background-size: cover;
-    border: none;
-    border-radius: 10px;
     position: absolute;
-    top: 0;
-    right: 0;
-    margin: 15px;
+    right: 50px;
+    border: none;
+
 }
 .close:hover{
     
@@ -218,27 +221,40 @@ header .logo{
     cursor: pointer;
     border-radius: 10px;
     height: 40px;
+    width: 100%;
     margin: 0 10px;
     transition: none;
 }
 .sideBard ul{
     list-style: none;
 }
-.sideBard ul li{
-    padding: 5px 0;
-    border-radius: 5px;
+.navDecoration{
+    padding: 30px 0;
+    border-bottom: 1px solid black;
+
 }
 .barreYellow{
+    position: absolute;
+    right: 0;
+    width: 100px;
     background-color: #F5EF64;
 }
 
 .sideBard ul div{
     display: flex;
+    justify-content: space-around;
 }
 .sideBard ul div li{
-    padding-right: 5px;
+    margin-top: 20px;
+    padding:10px;
+    border-radius: 5px;
+    background-color: #ff0022;
+    width: 35%;
+    text-align: center;
 }
-
+.sideBard ul div li:hover{
+    background-color: #F56477;
+}
 
 
 
@@ -277,6 +293,7 @@ header .logo{
     display: flex;
     padding: 10px 0;
 }
+
 .genre_type_filtre label{
     padding-right: 10px;
 }

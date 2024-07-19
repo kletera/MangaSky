@@ -22,7 +22,8 @@ main{
     text-decoration: none;
     margin: auto;
     float: left;
-    width: 50%;
+    width: 48%;
+    text-align: left;
     padding: 15px 10px;
     overflow: hidden;
     position: relative;
@@ -35,7 +36,11 @@ main{
     color: #000;
 }
 .itemupdate ul{
+    margin: 0;
+    width: 70%;
+    padding: 1px 10px ;
     list-style: none;
+    overflow: hidden;
 }
 .itemupdate ul li{
     display: flex;
@@ -80,23 +85,34 @@ aside{
     display: flex;
     justify-content: space-around;
     padding: 0;
+    background-color: white;
+    list-style: none;
 }
 aside a{
     text-decoration: none;
     color: #000;
 }
-aside ul{
-    list-style: none;
-    display: flex;
-}
 .border_number{
     padding: 10px;
     border: 2px solid black;
-    margin: auto;
+    margin: auto 10px;
 }
 .aside_section{
     display: flex;
+    border-bottom: 1px solid white;
+    padding: 10px;
 }
 .aside_section img{
     height: 100px;
+}
+.asideUl{
+    list-style: none;
+    padding-left: 10px;
+    margin: 0;
+    flex-wrap: wrap;
+}
+.genreAside{
+    display: flex; 
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
