@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/commun.css">
-    <link rel="stylesheet" href="./src/css/manga.css">
-
-    <title>Manga</title>
+    <link rel="stylesheet" href="./src/css/inscrire.css">
+    <title>Document</title>
 </head>
 <body>
     <header>
@@ -58,7 +57,7 @@
             </div>
             <img src="./Image/Icons/menu_25dp_000000_FILL1_wght400_GRAD0_opsz24.png" alt="Menu Burger" id="menuBurger">
             <div class="sideBard">
-                <button class="close"></button>
+                <button><img src="" alt=""></button>
                 <form class="rechercher">
                     <img src="./Image/Icons/pngegg.png" alt="Item Rechercher">
                     <input type="search" name="search" id="search">
@@ -92,37 +91,27 @@
         </nav>
     </header>
     <main>
-        <div style="margin: auto;">
-            <article class="mangaHead">
-                <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="image One Piece">
-                <div class="mangaInfo">
-                    <h1>One Piece</h1>
-                    <p>Auteur:<span></span></p>
-                    <p>Status:<span></span></p>
-                    <p>Chapitre:<span></span></p>
-                    <div>
-                        <p>Genre:</p>
-                        <span>Aventure</span>
-                    </div>
-                    <p>Derniere mise à jours<span></span></p>
-                </div>
-            </article>
-            <div class="titreSwich">
-                <h2><a href="">SYNOPSIS</a></h2>
-                <div class="barre"></div>
-                <h2><a href="" class="colorChange">CHAPITRE</a></h2>
+        <article>
+            <img src="./Image/LOGO Manga.png" alt="Logo">
+            <h2>S'inscrire</h2>
+            <div class="label_incription">
+                <input type="email" name="email" id="email" maxlength="50" required>
+                <label for="email">Adresse e-mail</label>
+                <span class="dis_none">Adresse e-mail</span>
             </div>
-            <article class="description">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eligendi doloribus voluptates autem distinctio ipsum inventore ad laboriosam sapiente incidunt ea consequatur cupiditate, odit temporibus iusto maiores delectus, porro quae.
-                </p>
-            </article>
-            <article>
-
-            </article>
-            <section>
-
-            </section>
-        </div>
+            <div class="label_incription">
+                <input type="password" name="password" id="password" required>
+                <label for="">Veuillez saisir votre mot de passe</label>
+                <span class="dis_none">Veuillez saisir votre mot de passe</span>
+            </div>
+            <div class="label_incription">
+                <input type="password" name="verifpassword" id="verifpassword" required>
+                <label for="verifpassword">Saisissez de nouveau le mot de passe</label>
+                <span>Saisissez de nouveau le mot de passe</span>  
+            </div>
+            <input type="submit" value="S'inscrire">
+            <p>Vous avez déjà un compte ?<a href="./connexion.html">Connexion</a></p>
+        </article>
     </main>
     <footer>
         <ul>

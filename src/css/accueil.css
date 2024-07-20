@@ -5,18 +5,15 @@
 
 /* conteneur */
 .container{
-    width: 70%;
+    width: 65%;
     margin:auto;
 }
 
 /* Article manga */
 /* 2 technique float left ou display grid */
-main{
-    float: left;
-    width: 70%;
-}
 .article_manga{
     margin: auto;
+    margin-bottom: 20px;
 }
 .itemupdate{
     text-decoration: none;
@@ -37,7 +34,7 @@ main{
 }
 .itemupdate ul{
     margin: 0;
-    width: 70%;
+    width: 65%;
     padding: 1px 10px ;
     list-style: none;
     overflow: hidden;
@@ -73,13 +70,17 @@ main{
     padding: 8px 12px;
     margin:5px 5px 5px 0;
     border: 1px solid black;
+    background-color: #64C7F5;
 }
 /* aside populaire */
 aside{
-    width: 30%;
+    width: 20%;
     float: right;
     background-color: #F5EF64;
     border-radius: 10px;
+    position: absolute;
+    right: 0;
+    top: 10%;
 }
 .calendrier{
     display: flex;
@@ -93,8 +94,13 @@ aside a{
     color: #000;
 }
 .border_number{
-    padding: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
     border: 2px solid black;
+    border-radius: 2px;
     margin: auto 10px;
 }
 .aside_section{
@@ -115,4 +121,12 @@ aside a{
     display: flex; 
     margin-top: 20px;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width:1104px) {
+    aside{
+        float: none;
+        position: relative;
+        width: 100%;
+    }
 }
