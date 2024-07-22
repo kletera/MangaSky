@@ -189,7 +189,12 @@ header .logo{
     text-align: left;
     transition: transform 300ms;
     font-size: 14px;
-    z-index: 2;
+    z-index: 10;
+}
+@media screen and (max-width: 635px){
+    .sideBard{
+        width:100%;
+    }
 }
 .sideBard a{
     text-decoration: none;
@@ -212,6 +217,7 @@ header .logo{
     background-size: cover;
 }
 .sideBard .rechercher{
+    padding-left: 0;
     margin-top: 35px;
 }
 .sideBard .rechercher img{
@@ -228,6 +234,7 @@ header .logo{
 }
 .sideBard ul{
     list-style: none;
+    padding-left: 10px;
 }
 .navDecoration{
     padding: 30px 0;
@@ -259,7 +266,7 @@ header .logo{
 
 
 
-@media screen and (max-width: 957px){
+@media screen and (max-width: 1084px){
     header{
         justify-content: space-between;
     }
@@ -326,7 +333,7 @@ header .logo{
     margin-right: 10px;
     margin-bottom: 10px;
 }
-@media screen and (max-width: 1235px) {
+@media screen and (max-width: 1304px) {
     .grid_filtre{
         height: 200px;
     }

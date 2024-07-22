@@ -8,14 +8,33 @@
     width: 65%;
     margin:auto;
 }
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
 
 /* Article manga */
 /* 2 technique float left ou display grid */
 .article_manga{
-    margin: auto;
     margin-bottom: 20px;
 }
-@media screen and(max-width:1000px) {
+@media screen and (max-width:1000px) {
     .article_manga{
         display: flex;
         flex-direction: column;
@@ -61,6 +80,11 @@
     width: 100px;
     float: left;
     padding-right: 10px;
+}
+@media screen and(max-width:780px){
+    .itemupdate{
+        width: 98%;
+    }
 }
 
 /* bouton suivant */
@@ -132,6 +156,9 @@ aside a{
     aside{
         float: none;
         position: relative;
+        width: 100%;
+    }
+    .filtre{
         width: 100%;
     }
 }
