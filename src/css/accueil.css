@@ -15,9 +15,14 @@
     margin: auto;
     margin-bottom: 20px;
 }
+@media screen and(max-width:1000px) {
+    .article_manga{
+        display: flex;
+        flex-direction: column;
+    }
+}
 .itemupdate{
     text-decoration: none;
-    margin: auto;
     float: left;
     width: 48%;
     text-align: left;

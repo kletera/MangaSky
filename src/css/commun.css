@@ -275,6 +275,8 @@ header .logo{
 
 /* bt Filtre */
 #bt_filtre{
+    font-family: 'Manga Temple';
+    text-transform: uppercase;
     background-color: #64C7F5;
     border: #64C7F5;
     padding: 10px;
