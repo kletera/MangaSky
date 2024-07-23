@@ -12,6 +12,7 @@
     .container {
         max-width: 750px;
     }
+
 }
 @media screen and (min-width: 768px) {
     .container {
@@ -22,10 +23,14 @@
     .container {
         max-width: 970px;
     }
+
 }
 @media screen and (min-width: 1200px) {
     .container {
         max-width: 1170px;
+    }
+    .article_manga{
+        width: 58%;
     }
 }
 
@@ -33,6 +38,7 @@
 /* 2 technique float left ou display grid */
 .article_manga{
     margin-bottom: 20px;
+    width: 728px;
 }
 @media screen and (max-width:1000px) {
     .article_manga{
