@@ -1,43 +1,17 @@
-
-*{
-    box-sizing: border-box;
-}
-
 /* conteneur */
-.container{
-    width: 65%;
-    margin:auto;
+.containerMain{
+    margin:20px auto;
+    display: block;
 }
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 750px;
-    }
-
+.containerMainLeft{
+    float: left;
+    display: block;
+    width: 728px;
+    margin-right: 10px;
 }
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 750px;
-    }
-}
-@media screen and (min-width: 992px) {
-    .container {
-        max-width: 970px;
-    }
-
-}
-@media screen and (min-width: 1200px) {
-    .container {
-        max-width: 1170px;
-    }
-    .article_manga{
-        width: 58%;
-    }
-}
-
 /* Article manga */
 /* 2 technique float left ou display grid */
 .article_manga{
-    margin-bottom: 20px;
     width: 728px;
 }
 @media screen and (max-width:1000px) {
@@ -49,9 +23,9 @@
 .itemupdate{
     text-decoration: none;
     float: left;
-    width: 48%;
+    width: calc(50% - 20px);
     text-align: left;
-    padding: 15px 10px;
+    padding: 1%;
     overflow: hidden;
     position: relative;
 }
@@ -68,6 +42,7 @@
     padding: 1px 10px ;
     list-style: none;
     overflow: hidden;
+    box-sizing: border-box;
 }
 .itemupdate ul li{
     display: flex;
@@ -108,14 +83,12 @@
     background-color: #64C7F5;
 }
 /* aside populaire */
-aside{
-    width: 20%;
-    float: right;
+.containerMainRight{
+    float: left;
+    display: block;
     background-color: #F5EF64;
     border-radius: 10px;
-    position: absolute;
-    right: 0;
-    top: 10%;
+    width: 300px;
 }
 .calendrier{
     display: flex;
@@ -124,7 +97,7 @@ aside{
     background-color: white;
     list-style: none;
 }
-aside a{
+.containerMainRight a{
     text-decoration: none;
     color: #000;
 }
@@ -147,6 +120,7 @@ aside a{
     height: 100px;
 }
 .asideUl{
+    box-sizing: border-box;
     list-style: none;
     padding-left: 10px;
     margin: 0;
@@ -156,15 +130,4 @@ aside a{
     display: flex; 
     margin-top: 20px;
     flex-wrap: wrap;
-}
-
-@media screen and (max-width:1104px) {
-    aside{
-        float: none;
-        position: relative;
-        width: 100%;
-    }
-    .filtre{
-        width: 100%;
-    }
 }
