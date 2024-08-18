@@ -11,7 +11,6 @@ main{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 16px;
-    height: 100%-139px;
 }
 .grid_h1 h1{
     font-family: 'Liberation Sans';
@@ -21,6 +20,7 @@ main{
 
 .grid_h1{
     grid-column: 1 / span 4;
+    display: none;
 }
 @media screen and (min-width: 0px){
     main {
@@ -31,9 +31,6 @@ main{
     main h1{
         font-size: 25.63px;
         text-align: center;
-    }
-    .grid_h1{
-        display: none;
     }
 }
 @media screen and (min-width: 640px){
@@ -46,9 +43,6 @@ main{
         font-size: 25.63px;
         text-align: center;
     }
-    .grid_h1{
-        display: none;
-    }
 }
 @media screen and (min-width: 823px){
     main{
@@ -59,7 +53,7 @@ main{
     main {
         grid-template-columns: repeat(12, 1fr);
         column-gap: 16px;
-        margin: 10% 24px 0;
+        margin: 5% 24px 0;
     }
     main h1{
         font-size: 61.03px;
@@ -76,14 +70,20 @@ main{
     main {
         grid-template-columns: repeat(12, 1fr);
         column-gap: 16px;
-        margin: 10% 48px 0;
+        margin: 5% 48px 0;
+    }
+    .grid_h1 {
+        display: block;
     }
 }
 @media screen and (min-width: 1560px){
     main{
         grid-template-columns: repeat(12, 1fr);
         column-gap: 24px;
-        margin: 20% 72px 0;
+        margin: 5% 72px 0;
+    }
+    .grid_h1 {
+        display: block;
     }
 }
 

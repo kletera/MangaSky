@@ -6,24 +6,48 @@
 .containerMainLeft{
     float: left;
     display: block;
-    width: 728px;
+
     margin-right: 10px;
+}
+.containerMainRight{
+    float: left;
+    display: block;
+    background-color: #F5EF64;
+    border-radius: 10px;
+    width: 300px;
+}
+@media screen and (max-width: 1040px){
+    .containerMainLeft{
+        margin: auto;
+        float: none;
+    }
+    .containerMainRight{
+        margin: auto;
+        float: none;
+        width: 100%;
+    }
 }
 /* Article manga */
 /* 2 technique float left ou display grid */
 .article_manga{
-    width: 728px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 30px;
 }
-@media screen and (max-width:1000px) {
+
+@media screen and (min-width:758px) {
     .article_manga{
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .bt_pg_suivante{
+        grid-column: 1 / span 2;
     }
 }
 .itemupdate{
     text-decoration: none;
     float: left;
-    width: calc(50% - 20px);
+    width: 100%;
     text-align: left;
     padding: 1%;
     overflow: hidden;
@@ -38,7 +62,6 @@
 }
 .itemupdate ul{
     margin: 0;
-    width: 65%;
     padding: 1px 10px ;
     list-style: none;
     overflow: hidden;
@@ -62,17 +85,13 @@
     float: left;
     padding-right: 10px;
 }
-@media screen and(max-width:780px){
-    .itemupdate{
-        width: 98%;
-    }
-}
 
 /* bouton suivant */
 .bt_pg_suivante{
     clear: both;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 .bt_pg_suivante a{
     color: #000;
@@ -83,13 +102,6 @@
     background-color: #64C7F5;
 }
 /* aside populaire */
-.containerMainRight{
-    float: left;
-    display: block;
-    background-color: #F5EF64;
-    border-radius: 10px;
-    width: 300px;
-}
 .calendrier{
     display: flex;
     justify-content: space-around;
@@ -102,13 +114,16 @@
     color: #000;
 }
 .border_number{
-    width: 30px;
-    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
     text-align: center;
     font-weight: bold;
-    padding: 5px;
+    font-size: 16px;
     border: 2px solid black;
-    border-radius: 2px;
+    border-radius: 5px;
     margin: auto 10px;
 }
 .aside_section{
