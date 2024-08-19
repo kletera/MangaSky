@@ -87,8 +87,8 @@ main{
     }
 }
 
-/* Article */
-article{
+/* formulaire */
+#formIn{
     background-color: #64C7F5;
     border-radius: 20px;
     display: flex;
@@ -99,85 +99,100 @@ article{
     box-sizing: border-box;;
     grid-column: 9 / span 4;
 }
-article div{
-    position:relative;
-}
-article a{
+#formIn a{
     padding-left: 10px;
     color:#F56477;
     text-decoration: none;
 }
-article img{
+#formIn img{
     height: 100px;
     width: 100px;
     align-self: center;
 }
-article input{
+#formIn input{
     border: none;
     border-radius: 20px;
-    margin-bottom: 10px;
     height: 48px;
+    font-size: 12.64px;
     padding-top: 12px;
     padding-left: 15px;
     width: 100%;
     font-size: 12px;
 }
-article input[type="submit"]{
+#formIn input[type="submit"]{
     margin-top: 20px;
     background-color: #F5EF64;
     text-transform: uppercase;
     padding: 12px;
 }
-.label_incription label{
-    color: rgb(102, 102, 102);
+.label_incription{
+    margin-bottom: 10px;
+    position:relative;
+}
+.labelDow{
+    color: #9ea2ae;
     position: absolute;
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.06em;
-    font-size: 12.64px;
+    font-size: 16px;
     left: 16px;
     top: 25px;
     opacity: 1;
     height: 17.33px;
     pointer-events: none;
     text-align: left;
+    transition: top .15s, font-size .15s;
 }
-.label_incription span{
-    color: rgb(102, 102, 102);
-    position: absolute;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    line-height: 100%;
-    font-size: 11.24px;
-    left: 8px;
+.labelUpError{
+    font-size: 10px;
+    left: 15px;
     top: 10px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-50%);
+    color: #F56477;
+}
+.labelUp{
+    font-size: 10px;
+    left: 15px;
+    top: 10px;
+    color: #9ea2ae;
+}
+
+.messageError{
+    color:#F56477;
+    text-align: left;
+    margin-top: 4px;
+}
+.popUp{
+    z-index: 1;
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: azure;
+    border-radius: 5px;
 }
 @media screen and (min-width: 0px){
-    article{
+    #formIn{
     grid-column: 1 / span 4;
     }
 }
 @media screen and (min-width: 640px){
-    article{
+    #formIn{
     grid-column: 2 / span 6;
     }
 }
 @media screen and (min-width: 1040px){
-    article{
+    #formIn{
     grid-column: 8 / span 5;
     }
 }
 @media screen and (min-width: 1280px){
-    article{
+    #formIn{
         grid-column: 9 / span 4;
     }
 }
 @media screen and (min-width: 1560px){
-    article{
+    #formIn{
         grid-column: 9 / span 4;
     }
 }

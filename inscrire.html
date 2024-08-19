@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/commun.css">
-    <link rel="stylesheet" href="./src/css/inscrire.css">
+    <link rel="stylesheet" href="./src/css/inscrireConnexion.css">
+    <script src="./src/js/inscrire.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -79,27 +80,27 @@
         <div class="grid_h1">
             <h1>créer un compte</h1>
         </div>
-        <article>
+        <form id="formIn">
             <img src="./Image/LOGO Manga.png" alt="Logo">
             <h2>S'inscrire</h2>
             <div class="label_incription">
                 <input type="email" name="email" id="email" maxlength="50" required>
-                <label for="email">E-mail</label>
-                <span class="dis_none">E-mail</span>
+                <label for="email" class="labelDow">E-mail</label>
+                <div class="messageError"></div>
             </div>
             <div class="label_incription">
                 <input type="password" name="password" id="password" required>
-                <label for="">Mot de passe</label>
-                <span class="dis_none">Mot de passe</span>
+                <label for="password" class="labelDow">Mot de passe</label>
+                <div class="messageError dis_none"></div>
             </div>
             <div class="label_incription">
                 <input type="password" name="verifpassword" id="verifpassword" required>
-                <label for="verifpassword">Confirmation mot de passe</label>
-                <span>Confirmation mot de passe</span>  
+                <label for="verifpassword" class="labelDow">Confirmation mot de passe</label>
+                <div class="messageError"></div> 
             </div>
             <input type="submit" value="S'inscrire" disabled>
             <p>Vous avez déjà un compte ?<a href="./connexion.html">Connexion</a></p>
-        </article>
+        </form>
     </main>
     <footer>
         <ul>
