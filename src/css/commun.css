@@ -89,6 +89,7 @@ header{
 }
 header .logo{
     float: left;
+    margin-left: 15px;
 }
 .effectNav, .ConnexionInscription {
     display: flex;
@@ -176,7 +177,6 @@ header .logo{
     width: 400px;
     height: 40px;
     font-size: 16px;
-    transition: all 0.5s ease-out;
 }
 .space{
     display: flex;
@@ -207,7 +207,6 @@ header .logo{
 
 /* Menue Burger */
 #burger{
-    display: none;
     list-style: none;
     position: fixed;
     top: 0;
@@ -246,9 +245,10 @@ header .logo{
     background-image:url(../../Image/Icons/téléchargement.png);
     background-size: cover;
 }
-@media screen and (min-width: 550px){
+@media screen and (min-width: 580px){
     #burger{
         width: 370px;
+        display: none;
     }
 }
 /* bt Filtre */

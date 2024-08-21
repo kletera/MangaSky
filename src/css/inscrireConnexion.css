@@ -12,6 +12,10 @@ main{
     grid-template-columns: repeat(12, 1fr);
     column-gap: 16px;
 }
+.mainCo{
+    display: flex;
+    justify-content: center;
+}
 .grid_h1 h1{
     font-family: 'Liberation Sans';
     text-transform: uppercase;
@@ -26,7 +30,10 @@ main{
     main {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 16px;
-        margin: 0px 16px;
+        margin: 0px 2px;
+    }
+    .mainCo{
+        margin-top: 40px;
     }
     main h1{
         font-size: 25.63px;
@@ -46,7 +53,7 @@ main{
 }
 @media screen and (min-width: 823px){
     main{
-        margin: 2% 48px 0;
+        margin: 4% 48px 0;
     }
 }
 @media screen and (min-width: 1040px){
@@ -88,38 +95,36 @@ main{
 }
 
 /* formulaire */
-#formIn{
+#formIn, #formCo{
     background-color: #64C7F5;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 32px;
-    min-height: 579px;
-    box-sizing: border-box;;
-    grid-column: 9 / span 4;
+    box-sizing: border-box;
 }
-#formIn a{
+#formIn a, #formCo a{
     padding-left: 10px;
-    color:#F56477;
+    color:red;
     text-decoration: none;
 }
-#formIn img{
+#formIn img, #formCo img{
     height: 100px;
     width: 100px;
     align-self: center;
 }
-#formIn input{
+#formIn input, #formCo input{
     border: none;
     border-radius: 20px;
     height: 48px;
+    line-height: 32px;
     font-size: 12.64px;
-    padding-top: 12px;
-    padding-left: 15px;
+    padding: 12px 0 0 15px;
     width: 100%;
     font-size: 12px;
 }
-#formIn input[type="submit"]{
+#formIn input[type="submit"], #formCo input[type="submit"]{
     margin-top: 20px;
     background-color: #F5EF64;
     text-transform: uppercase;
@@ -132,7 +137,6 @@ main{
 .labelDow{
     color: #9ea2ae;
     position: absolute;
-    text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.06em;
     font-size: 16px;
@@ -148,7 +152,7 @@ main{
     font-size: 10px;
     left: 15px;
     top: 10px;
-    color: #F56477;
+    color: red;
 }
 .labelUp{
     font-size: 10px;
@@ -158,9 +162,11 @@ main{
 }
 
 .messageError{
-    color:#F56477;
+    color:red;
     text-align: left;
-    margin-top: 4px;
+    padding: 4px;
+    margin-top: 2px;
+    list-style:none;
 }
 .popUp{
     z-index: 1;
@@ -171,19 +177,22 @@ main{
     background-color: azure;
     border-radius: 5px;
 }
+.txtError{
+    padding: 5px;
+}
 @media screen and (min-width: 0px){
-    #formIn{
-    grid-column: 1 / span 4;
+    #formIn,#formCo{
+        grid-column: 1 / span 4;
     }
 }
 @media screen and (min-width: 640px){
-    #formIn{
-    grid-column: 2 / span 6;
+    #formIn,#formCo{
+        grid-column: 2 / span 6;
     }
 }
 @media screen and (min-width: 1040px){
     #formIn{
-    grid-column: 8 / span 5;
+        grid-column: 8 / span 5;
     }
 }
 @media screen and (min-width: 1280px){
