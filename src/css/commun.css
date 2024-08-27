@@ -270,16 +270,25 @@ header .logo{
     padding: 15px;
     margin: 0 10px;
 }
+@media screen and (max-width: 375px) {
+    .filtre{
+        overflow: scroll;
+    }
+}
 /* Genre + Type filtre */
-.genre_type_filtre{
+.staTypFiltre{
     display: flex;
+    flex-wrap: wrap;
     padding: 10px 0;
 }
-
-.genre_type_filtre label{
+.ftResponsible{
+    display: grid;
+    grid-template-columns:max-content;
+}
+.staTypFiltre label{
     padding-right: 10px;
 }
-.genre_type_filtre h4{
+.staTypFiltre h4{
     margin: 0;
     padding-right: 10px;
 }
@@ -290,24 +299,35 @@ header .logo{
     padding: 2px;
     width: 100%;
 }
+
+@media screen and (max-width:470px){
+
+}
 /* Submit filtre */
 .filtre button{
     background-color: #F56477;
 }
 /* Filtre Genre */
-.grid_filtre{
+.flexFiltre{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: 150px;
 }
-.grid_filtre label{
+.flexFiltre label{
     margin-right: 10px;
     margin-bottom: 10px;
     display: flex;
 }
 @media screen and (max-width: 735px) {
-    .grid_filtre{
+    .flexFiltre{
         height: 300px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .flexFiltre{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        height: auto;
     }
 }
