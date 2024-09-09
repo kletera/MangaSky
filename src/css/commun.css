@@ -268,12 +268,7 @@ header .logo{
     width: fit-content;
     height: fit-content;
     padding: 15px;
-    margin: 0 10px;
-}
-@media screen and (max-width: 375px) {
-    .filtre{
-        overflow: scroll;
-    }
+    margin: 0;
 }
 /* Genre + Type filtre */
 .staTypFiltre{
@@ -283,10 +278,11 @@ header .logo{
 }
 .ftResponsible{
     display: grid;
-    grid-template-columns:max-content;
+    grid-template-columns:repeat(4,1fr);
 }
 .staTypFiltre label{
     padding-right: 10px;
+    display: flex;
 }
 .staTypFiltre h4{
     margin: 0;
@@ -300,12 +296,25 @@ header .logo{
     width: 100%;
 }
 
-@media screen and (max-width:470px){
-
+@media screen and (max-width: 425px) {
+    .staTypFiltre{
+        flex-direction: column;
+    }
+    .staTypFiltre h4{
+        margin-bottom: 5px;
+    }
+    .ftResponsible{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .ftResponsible label{
+        margin-bottom: 10px;
+    }
 }
+
 /* Submit filtre */
 .filtre button{
     background-color: #F56477;
+    margin-top: 10px;
 }
 /* Filtre Genre */
 .flexFiltre{
@@ -328,6 +337,6 @@ header .logo{
     .flexFiltre{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        height: auto;
+        height: fit-content;        
     }
 }

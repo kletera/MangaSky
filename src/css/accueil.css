@@ -1,7 +1,9 @@
 /* conteneur */
 .containerMain{
     margin:20px auto;
+    position: relative;
     display: block;
+    padding: 0 10px;
 }
 .containerMainLeft{
     float: left;
@@ -34,6 +36,7 @@
     grid-template-columns: minmax(0, 1fr);
     grid-auto-rows: auto;
     grid-gap: 30px;
+    margin-top: 10px;
 }
 
 @media screen and (min-width:758px) {
@@ -81,7 +84,7 @@
     color: #f56477;
 }
 .itemupdate img{
-    width: 100px;
+    height: 105px;
     float: left;
     padding-right: 10px;
 }
@@ -91,7 +94,6 @@
     clear: both;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
 }
 .bt_pg_suivante a{
     color: #000;
