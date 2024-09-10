@@ -26,7 +26,7 @@
                 </li>
                 <li>
                     <div></div>
-                    <a href="">Random</a>
+                    <a href="./Random.html">Random</a>
                 </li>
                 <li>
                     <div></div>
@@ -46,7 +46,7 @@
                     <a href="">Nouveau <span class="barreYellow"></span></a>
                 </li>
                 <li>
-                    <a href="">Random <span class="barreYellow"></span></a>
+                    <a href="./Random.html">Random <span class="barreYellow"></span></a>
                 </li>
                 <li>
                     <a href="">Populaire <span class="barreYellow"></span></a>
@@ -87,12 +87,12 @@
             <h2>S'inscrire</h2>
             <div class="label_incription">
                 <input type="email" name="email" id="email" maxlength="50" required>
-                <label for="email" class="labelDow">E-mail</label>
+                <label for="email" class="labelDow" required>E-mail</label>
                 <div class="messageError"></div>
             </div>
             <div class="label_incription">
                 <input type="password" name="password" id="password" required>
-                <label for="password" class="labelDow">Mot de passe</label>
+                <label for="password" class="labelDow" required>Mot de passe</label>
                 <ul class="messageError dis_none">
                     <li class="txtError"></li>
                     <li class="txtError"></li>
@@ -101,10 +101,10 @@
             </div>
             <div class="label_incription">
                 <input type="password" name="verifpassword" id="verifpassword" required>
-                <label for="verifpassword" class="labelDow">Confirmation mot de passe</label>
+                <label for="verifpassword" class="labelDow" required>Confirmation mot de passe</label>
                 <div class="messageError"></div> 
             </div>
-            <input type="submit" value="S'inscrire" disabled>
+            <input type="submit" value="S'inscrire">
             <p>Vous avez déjà un compte ?<a href="./connexion.html">Connexion</a></p>
         </form>
     </main>
