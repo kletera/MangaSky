@@ -50,7 +50,7 @@
 .itemupdate{
     text-decoration: none;
     float: left;
-    width: 100%;
+    width: 312px;
     text-align: left;
     padding: 1%;
     overflow: hidden;
@@ -65,7 +65,8 @@
 }
 .itemupdate ul{
     margin: 0;
-    padding: 1px 10px ;
+    padding: 1px 0;
+    padding-left: 10px;
     list-style: none;
     overflow: hidden;
     box-sizing: border-box;
@@ -130,7 +131,7 @@
 }
 .aside_section{
     display: flex;
-    border-bottom: 1px solid white;
+    border-top: 1px solid white;
     padding: 10px;
 }
 .aside_section img{
