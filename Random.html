@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/commun.css">
     <link rel="stylesheet" href="./src/css/accueil.css">
+    <script src="./src/js/nightMode.js" defer></script>
     <title>Random</title>
 </head>
 <body>
     <header>
-        <nav class="navBareUp">
+        <nav class="navBarUp">
         <a href="./connexion.html"><img src="./Image/LOGO Manga.png" class="logo" alt="Logo MangaSky"></a>
         <div style="margin: auto 0;">
             <ul class="effectNav">
@@ -51,26 +52,26 @@
             </ul>
         </div>
         </nav>
-        <nav class="navBareDown">
-            <form class="rechercher">
+        <nav class="navBarDown">
+            <form class="barSearch">
                 <img src="./Image/Icons/pngegg.png" alt="Item Rechercher" id="imgSearch">
                 <input type="search" name="search" id="search" placeholder="Rechercher Manga">
             </form>
             <div class="space">
                 <ul style="list-style: none; display: flex; padding-left: 0;">
-                    <li id="inscription">
+                    <li class="btLogin">
                         <a href="./inscrire.html">S'incrire
                             <img src="./Image/Icons/sign-up-icon-signup-square-box-on-transparent-background-free-png.png" height="30px" alt="Image inscription">
                         </a>
                     </li>
-                    <li id="connexion">
+                    <li class="btLogin">
                         <a href="./connexion.html">Mon compte
                             <img src="./Image/Icons/login_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" height="30px" alt="Image Connexion">
                         </a>
                     </li>
                 </ul>
                 <div class="themeSwich">
-                    <button><img src="./Image/Icons/nights_stay_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" alt="" height="25px"></button>
+                    <button disabled><img src="./Image/Icons/nights_stay_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" alt="" height="25px"></button>
                 </div>
             </div>
         </nav>
@@ -79,9 +80,9 @@
         <div class="containerMain">
             <h1>Dernieres publication</h1>
             <!-- Filtre -->
-            <button id="bt_filtre" type="button">Filtre</button>
-            <form class="filtre">
-                <div class="staTypFiltre">
+            <button id="bt_filter" type="button">Filtre</button>
+            <form class="filter dis_none">
+                <div class="staTypFilter">
                     <h4>Status:</h4>
                     <div style="display: flex;">
                         <label for="tous">
@@ -99,7 +100,7 @@
                     </div>
                 </div>
                     
-                <div class="staTypFiltre">
+                <div class="staTypFilter">
                     <h4>Type:</h4>
                     <div class="ftResponsible">
                         <label for="manga">
@@ -121,7 +122,7 @@
                     </div>
                 </div>
                 <h4>Genre:</h4>
-                <div class="flexFiltre">
+                <div class="flexFilter">
                     <label for="action">
                         <input type="checkbox" name="action" id="action">
                         <span>Action</span>
@@ -231,304 +232,296 @@
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
-                        <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                        <li>Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
+                            <a href="">Chapitre 13</a>
                             <span>2 jours</span>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <img src="" alt="">
+                            <p class="see">500</p><span>vue</span>
                         </li>
+                        <li><p class="contain">Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate</p></li>
                     </ul>
                 </article>
                 <article class="itemupdate">
                     <a href="./manga.html">
                         <img src="./Image/Manga/One_Piece/1-1583463814.jpg" alt="One_Piece" titre="One_Piece">
                     </a>
-                    
-                    <ul>
+                    <ul class="listRNP">
                         <li style="padding: 0; margin-bottom: 10px;">
                             <a href="./manga.html">
                                 <h3>One Piece</h3>
                             </a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>20 heures</span>
+                            Auteur:
+                            <a href="">Oda</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>2 jours</span>
+                            <a href="">Chapitre 13</a>
                         </li>
                         <li>
-                            <a href="">Chapitre 1118</a>
-                            <span>1 semaines</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                <path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z"/>
+                            </svg>
+                            <p class="see"><span>500</span> vue</p>
+                        </li>
+                        <li class="contain">
+                            Luffy décide de prendre la mer après sa rencontre avec Shanks le roux, le capitaine d'un navire de pirate
                         </li>
                     </ul>
                 </article>
                 <!-- Bouton page suivante -->
-                <div class="bt_pg_suivante">
+                <div class="bt_pg_next">
                     <a href="">Premier</a>
                     <a href="">1</a>
                     <a href="">2</a>

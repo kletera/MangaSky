@@ -8,8 +8,8 @@ btLight.addEventListener('click',()=>{
     light
     main.classList.toggle('dark_mode');
 })
-const btFiltre=document.querySelector('#bt_filtre');
-const filtre=document.querySelector('.filtre');
+const btFiltre=document.querySelector('#bt_filter');
+const filtre=document.querySelector('.filter');
 console.log(filtre,btFiltre);
 
 btFiltre.addEventListener('click',()=>{

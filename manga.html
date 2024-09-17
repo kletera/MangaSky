@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="./src/css/commun.css">
     <link rel="stylesheet" href="./src/css/manga.css">
     <script src="./src/js/commun.js" defer></script>
+    <script src="./src/js/manga.js" defer></script>
     <title>Manga</title>
 </head>
 <body>
     <header>
-        <nav class="navBareUp">
+        <nav class="navBarUp">
         <a href="./connexion.html"><img src="./Image/LOGO Manga.png" class="logo" alt="Logo MangaSky"></a>
         <div style="margin: auto 0;">
             <ul class="effectNav">
@@ -52,26 +53,26 @@
             </ul>
         </div>
         </nav>
-        <nav class="navBareDown">
-            <form class="rechercher">
+        <nav class="navBarDown">
+            <form class="barSearch">
                 <img src="./Image/Icons/pngegg.png" alt="Item Rechercher" id="imgSearch">
                 <input type="search" name="search" id="search" placeholder="Rechercher Manga">
             </form>
             <div class="space">
                 <ul style="list-style: none; display: flex; padding-left: 0;">
-                    <li id="inscription">
+                    <li class="btLogin">
                         <a href="./inscrire.html">S'incrire
                             <img src="./Image/Icons/sign-up-icon-signup-square-box-on-transparent-background-free-png.png" height="30px" alt="Image inscription">
                         </a>
                     </li>
-                    <li id="connexion">
+                    <li class="btLogin">
                         <a href="./connexion.html">Mon compte
                             <img src="./Image/Icons/login_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" height="30px" alt="Image Connexion">
                         </a>
                     </li>
                 </ul>
                 <div class="themeSwich">
-                    <button><img src="./Image/Icons/nights_stay_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" alt="" height="25px"></button>
+                    <button disabled><img src="./Image/Icons/nights_stay_24dp_000000_FILL1_wght400_GRAD0_opsz24.png" alt="" height="25px"></button>
                 </div>
             </div>
         </nav>
@@ -101,7 +102,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eligendi doloribus voluptates autem distinctio ipsum inventore ad laboriosam sapiente incidunt ea consequatur cupiditate, odit temporibus iusto maiores delectus, porro quae.
                 </p>
             </article>
-            <article class="description chapNumb">
+            <article class="description chapNumb ">
                 <h3>N°Chapitre</h3>
                 <h3 style="text-align: center;">Vue</h3>
                 <h3 style="text-align: center;">Date</h3>
