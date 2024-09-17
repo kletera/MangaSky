@@ -9,8 +9,13 @@ descriptionChap.classList.toggle('dis_none');
 descriptionChap.classList.toggle('chapNumb');
 
 synopsis.addEventListener('click',()=>{
+    titreChap.classList.remove('initial');
+    titreChap.classList.add('colorChange');
+    synopsis.classList.add('initial');
+    synopsis.classList.remove('colorChange');
     descriptionSy.classList.remove('dis_none');
     descriptionChap.classList.add('dis_none');
+    descriptionChap.classList.remove('chapNumb');
 });
 
 titreChap.addEventListener('click',()=>{
@@ -20,7 +25,14 @@ titreChap.addEventListener('click',()=>{
     synopsis.classList.add('colorChange');
     descriptionSy.classList.add('dis_none');
     descriptionChap.classList.remove('dis_none');
-    chapT
+    descriptionChap.classList.add('chapNumb');
 
 });
 
+const MangaApi =  async () => {
+    const data = await fetch('https://github.com/Sebastian-RP/manga-api');
+    console.log(data);
+    const dataTransformed = await  data.json();
+    console.log(dataTransformed);
+};
+MangaApi();

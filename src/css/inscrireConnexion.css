@@ -12,10 +12,7 @@ main{
     grid-template-columns: repeat(12, 1fr);
     column-gap: 16px;
 }
-.mainCo{
-    display: flex;
-    justify-content: center;
-}
+
 .grid_h1 h1{
     font-family: 'Liberation Sans';
     text-transform: uppercase;
@@ -31,9 +28,6 @@ main{
         grid-template-columns: repeat(4, 1fr);
         column-gap: 16px;
         margin: 0px 2px;
-    }
-    .mainCo{
-        margin-top: 40px;
     }
     main h1{
         font-size: 25.63px;
