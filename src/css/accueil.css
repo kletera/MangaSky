@@ -1,4 +1,8 @@
 /* conteneur */
+main{
+    display:flex;
+    flex-direction: column;
+}
 .containerMain{
     margin:10px;
     display: block;
@@ -55,7 +59,6 @@
 .itemupdate{
     text-decoration: none;
     float: left;
-    height: 177px;
     width: 100%;
     text-align: left;
     overflow: hidden;
@@ -119,7 +122,15 @@
     padding: 8px 12px;
     margin:5px 5px 5px 0;
     border: 1px solid black;
+}
+.pagination{
+    background-color: white;
+}
+.bt_pg_next:first-child(),.bt_pg_next a:last-child(), .pagination:active {
     background-color: #64C7F5;
+}
+.pagination:hover:not(.active) {
+    background-color: #ddd;
 }
 /* aside populaire */
 .calendar{

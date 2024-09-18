@@ -6,88 +6,70 @@ body{
     min-height: 100vh;
 }
 
-/* Main + h1*/
+/* Main + h1 + Footer modification*/
 main{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    column-gap: 16px;
+    column-gap: 24px;
+    margin: 5% 72px;
 }
 
 .grid_h1 h1{
     font-family: 'Liberation Sans';
     text-transform: uppercase;
-    align-self: end;
+    font-size: 61.03px;
 }
 
 .grid_h1{
-    grid-column: 1 / span 4;
-    display: none;
+    /* grid-column: 1 / span 4; */
+    display: block;
+    align-self: end;
+    text-align: left;
+    grid-column: 2 / span 6;
 }
-@media screen and (min-width: 0px){
-    main {
-        grid-template-columns: repeat(4, 1fr);
+.confidentialité{
+    padding-top: 4px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+@media screen and (max-width: 1629px){
+    main{
+        margin: 46px 72px;
+    }
+}
+@media screen and (max-width: 1560px){
+    main{
         column-gap: 16px;
-        margin: 0px 2px;
-    }
-    main h1{
-        font-size: 25.63px;
-        text-align: center;
+        margin: 46px 48px;
     }
 }
-@media screen and (min-width: 640px){
+@media screen and (max-width: 1040px){
     main {
         grid-template-columns: repeat(8, 1fr);
-        column-gap: 16px;
-        margin: 0 16px 0;
+    }
+    .grid_h1 {
+        display: none;
+    }
+}
+@media screen and (max-width: 823px){
+    main{   
+        margin: 10px 16px;
+    }
+    
+}
+@media screen and (max-width: 640px){
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        margin:10px 2px;
     }
     main h1{
         font-size: 25.63px;
         text-align: center;
     }
 }
-@media screen and (min-width: 823px){
-    main{
-        margin: 4% 48px 0;
-    }
-}
-@media screen and (min-width: 1040px){
-    main {
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: 16px;
-        margin: 5% 24px 0;
-    }
-    main h1{
-        font-size: 61.03px;
-        text-align: left;
-    }
-    .grid_h1 {
-        display: block;
-        align-self: end;
-        text-align: left;
-        grid-column: 2 / span 6;
-    }
-}
-@media screen and (min-width: 1280px){
-    main {
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: 16px;
-        margin: 5% 48px 0;
-    }
-    .grid_h1 {
-        display: block;
-    }
-}
-@media screen and (min-width: 1560px){
-    main{
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: 24px;
-        margin: 5% 72px 0;
-    }
-    .grid_h1 {
-        display: block;
-    }
-}
-
 /* formulaire */
 #formIn, #formCo{
     background-color: #64C7F5;
@@ -97,6 +79,7 @@ main{
     text-align: center;
     padding: 32px;
     box-sizing: border-box;
+    height:565px;
 }
 #formIn a, #formCo a{
     padding-left: 10px;
@@ -181,33 +164,27 @@ main{
 }
 @media screen and (min-width: 640px){
     #formIn,#formCo{
-        grid-column: 2 / span 6;
+        grid-column: 3 / span 4;
     }
 }
 @media screen and (min-width: 1040px){
     #formIn{
         grid-column: 8 / span 5;
     }
+    #formCo{
+        grid-column: 4 / span 6;
+    }
 }
 @media screen and (min-width: 1280px){
     #formIn{
         grid-column: 9 / span 4;
     }
-}
-@media screen and (min-width: 1560px){
-    #formIn{
-        grid-column: 9 / span 4;
+    #formCo{
+        grid-column: 5 / span 4;
     }
 }
-
-
-/* Footer modification */
-footer{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-.confidentialité{
-    padding-top: 4px;
+@media screen and (min-width: 1560px){
+    #formCo{
+        grid-column: 5 / span 4;
+    }
 }
