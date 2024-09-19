@@ -1,0 +1,13 @@
+.account{
+    background-color: #64C7F5;
+    width: 100%;
+    border-radius: 10px;
+}
+.account ul{
+    list-style: none;
+    overflow:hidden;
+    box-sizing: border-box;
+}
+.libraryItem p{
+    position: absolute;
+}
