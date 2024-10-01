@@ -9,5 +9,17 @@
     box-sizing: border-box;
 }
 .libraryItem p{
-    position: absolute;
+    position: relative;
+    bottom: 50px;
+    left: 0px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #F5EF64;
+    border-radius: 5px;
+
+}
+.biblio{
+    display: grid;
+    grid-template-columns: repeat(3,109px);
+    column-gap:16px
 }
