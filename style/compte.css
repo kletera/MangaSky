@@ -1,25 +1,40 @@
 .account{
+    display: flex;
     background-color: #64C7F5;
     width: 100%;
     border-radius: 10px;
+}
+.account img{
+    border-radius: 20px;
 }
 .account ul{
     list-style: none;
     overflow:hidden;
     box-sizing: border-box;
+    padding-left: 10px;
 }
-.libraryItem p{
-    position: relative;
-    bottom: 50px;
-    left: 0px;
-    text-align: center;
-    text-decoration: none;
-    background-color: #F5EF64;
-    border-radius: 5px;
+/* .libraryItem img{
 
+} */
+.libraryItem div{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #F5EF64;
+}
+.libraryItem div p{
+    text-align: center;
+}
+
+@media screen and(max-width:760px) {
+    .libraryItem{
+        max-width: 25%;
+    }
 }
 .biblio{
-    display: grid;
-    grid-template-columns: repeat(3,109px);
-    column-gap:16px
+    display: flex;
+    flex-wrap: wrap;
 }
