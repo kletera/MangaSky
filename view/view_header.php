@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/commun.css">
-    <link rel="stylesheet" href="./style/inscrireConnexion.css">
-    <script src="./src/js/inscrireConnexion.js" defer></script>
-    <script src="./src/js/commun.js" defer></script>
-    <title>Connexion</title>
-</head>
 <body>
     <header>
         <nav class="navBarUp">
@@ -77,48 +66,3 @@
             </div>
         </nav>
     </header>
-    <main class="mainCo">
-        <form id="formCo" style="justify-content: space-evenly;">
-            <img src="./Image/LOGO Manga.png" alt="Logo">
-            <h2>Connexion</h2>
-            <div class="label_incription">
-                <input type="email" name="emailCo" id="emailCo" maxlength="50" required>
-                <label for="emailCo" class="labelDow" required>E-mail</label>
-                <div class="messageError"></div>
-            </div>
-            <div class="label_incription">
-                <input type="password" name="passwordCo" id="passwordCo" required>
-                <label for="passwordCO" class="labelDow" required>Mot de passe</label>
-                <ul class="messageError dis_none">
-                    <li class="txtError"></li>
-                    <li class="txtError"></li>
-                    <li class="txtError"></li>
-                </ul>
-            </div>
-            <input type="submit" value="Connexion">
-            <p style="display: flex; justify-content: space-between;">Mot de passe oublié ?
-                <a href="./inscrire.html">Créer un compte</a>
-            </p>
-        </form>
-    </main>
-    <footer>
-        <ul>
-            <li>
-                <a href="">
-                    <img src="./Image/Réseau/Facebook.png" alt="Lien Facebook">
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./Image/Réseau/636e0a6ac3c481f273141736_icon_clyde_black_RGB.png" alt="Lien Discord">
-                </a>
-            </li>
-            <li><a href="">
-                    <img src="./Image/Réseau/x-social-media-black-icon.png" alt="Lien X">
-                </a>
-            </li>
-        </ul>
-        <a href="" target="_blank" class="confidentialité">Politique de confidentialité</a>
-    </footer>
-</body>
-</html>
