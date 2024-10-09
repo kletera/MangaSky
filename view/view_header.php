@@ -9,7 +9,7 @@
     <?php echo $metaD?>
     <?php echo $supStyle?>
 </head>
-<body id="background">
+<body>
     <header>
         <nav class="navBarUp">
         <a href="./index.html"><img src="./Image/LOGO Manga.png" class="logo" alt="Logo MangaSky"></a>
@@ -25,7 +25,7 @@
                 </li>
                 <li>
                     <div></div>
-                    <a href="./autre.php">Random</a>
+                    <a href="./Random.php">Random</a>
                 </li>
                 <li>
                     <div></div>

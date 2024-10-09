@@ -6,11 +6,11 @@ body{
 /* Police */
 @font-face {
     font-family: 'Manga Temple';
-    src: url(../../Font/manga_temple/mangat.ttf);
+    src: url(../Font/manga_temple/mangat.ttf);
 }
 @font-face {
     font-family: 'Liberation Sans';
-    src: url(../../Font/liberation_sans/LiberationSans-Regular.ttf);
+    src: url(../Font/liberation_sans/LiberationSans-Regular.ttf);
 }
 h1{
     font-family: 'Manga Temple';
@@ -230,7 +230,7 @@ header .logo{
     background: linear-gradient(40deg,#64C7F5 50%,#F5EF64);
 }
 .close{
-    background-image: url(../../Image/Icons/close.png);
+    background-image: url(../Image/Icons/close.png);
     width: 40px;
     height: 40px;
     background-size: cover;
@@ -241,7 +241,7 @@ header .logo{
     border-radius: 5px;
 }
 .close:hover{
-    background-image:url(../../Image/Icons/téléchargement.png);
+    background-image:url(../Image/Icons/téléchargement.png);
     background-size: cover;
 }
 @media screen and (min-width: 580px){
