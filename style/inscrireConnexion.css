@@ -1,5 +1,5 @@
-body{
-    background-image: url(./../Image/ciel_bleu_manga.jpg);
+#background{
+    background-image: url(../Image/ciel_bleu_manga.jpg);
     background-size: cover;
     height: 100%;
     background-repeat: no-repeat;

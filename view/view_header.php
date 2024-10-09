@@ -9,7 +9,7 @@
     <?php echo $metaD?>
     <?php echo $supStyle?>
 </head>
-<body>
+<body id="background">
     <header>
         <nav class="navBarUp">
         <a href="./index.html"><img src="./Image/LOGO Manga.png" class="logo" alt="Logo MangaSky"></a>
