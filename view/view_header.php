@@ -17,19 +17,19 @@
             <ul class="effectNav">
                 <div></div>
                 <li>
-                    <a href="./index.html">Accueil</a>
+                    <a href="./index.php">Accueil</a>
                 </li>
                 <li>
                     <div></div>
-                    <a href="">Nouveau</a>
+                    <a href="./autre.php">Nouveau</a>
                 </li>
                 <li>
                     <div></div>
-                    <a href="./Random.html">Random</a>
+                    <a href="./autre.php">Random</a>
                 </li>
                 <li>
                     <div></div>
-                    <a href="">Populaire</a>
+                    <a href="./autre.php">Populaire</a>
                 </li>
             </ul>
             <button id="btMenuBurger">
@@ -39,16 +39,16 @@
             <ul id="burger" class="dis_none">
                 <button type="button" class="close"></button>
                 <li>
-                    <a href="./index.html">Accueil <span class="barreYellow"></span></a>
+                    <a href="./index.php">Accueil <span class="barreYellow"></span></a>
                 </li>
                 <li>
-                    <a href="">Nouveau <span class="barreYellow"></span></a>
+                    <a href="./autre.php">Nouveau <span class="barreYellow"></span></a>
                 </li>
                 <li>
-                    <a href="./Random.html">Random <span class="barreYellow"></span></a>
+                    <a href="./autre.php">Random <span class="barreYellow"></span></a>
                 </li>
                 <li>
-                    <a href="">Populaire <span class="barreYellow"></span></a>
+                    <a href="./autre.php">Populaire <span class="barreYellow"></span></a>
                 </li>
             </ul>
         </div>
@@ -61,12 +61,12 @@
             <div class="space">
                 <ul style="list-style: none; display: flex; padding-left: 0;">
                     <li class="btLogin">
-                        <a href="./inscrire.html">S'incrire
+                        <a href="./inscrire.php">S'incrire
                             <img src="./Image/Icons/sign-up-icon-signup-square-box-on-transparent-background-free-png.png" height="30px" alt="Image inscription">
                         </a>
                     </li>
                     <li class="btLogin">
-                        <a href="./connexion.html">Mon compte
+                        <a href="./connexion.php">Mon compte
                             <img src="./Image/Icons/login_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" height="30px" alt="Image Connexion">
                         </a>
                     </li>
