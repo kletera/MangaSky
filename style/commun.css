@@ -102,6 +102,7 @@ header .logo{
     display: flex;
     justify-content: space-between;
     background-color: #64C7F5;
+    padding-right: 1%;
 }
 .navBarUp li{
     margin: 0 15px !important;
@@ -140,25 +141,11 @@ header .logo{
 /* NavDown */
 .navBarDown{
     background-color: #383838;
-    width: 100%;
+    padding-right: 1%;
 }
-@media screen and (max-width: 820px) {
-    .navBarDown{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .barSearch{
-        width: 100%;
-    }
-    #search{
-        width: 90%;
-    }
-    .space{
-        width: 100%;
-    }
-}
+
 .barSearch{
-    margin: 16px;
+    margin: 14px;
     float: left;
     align-self: center;
 }
@@ -175,7 +162,7 @@ header .logo{
     border:none;
     padding: 2px 10px 0 34px;
     width: 400px;
-    height: 40px;
+    height: 35px;
     font-size: 16px;
 }
 .space{
@@ -184,11 +171,35 @@ header .logo{
 }
 .btLogin a{
     background-color: #F5EF64;
-    height: 35px;
+    height: 25px;
     margin-left: 5px;
     padding: 5px;
-
 }
+.btLogin span{
+    font-family: 'Manga Temple';
+}
+@media screen and (max-width: 820px) {   
+    .btLogin span{
+        display: none;
+    }
+}
+@media screen and (max-width:580px){
+    .barSearch{
+        margin-left:0px;
+    }
+    .barSearch input{
+        width: 200px;
+    }
+}
+@media screen and (max-width:375px){
+    .barSearch{
+        margin-left:0px;
+    }
+    .barSearch input{
+        width: 150px;
+    }
+}
+
 /* Swich mod */
 .themeSwich{
     align-self: center;

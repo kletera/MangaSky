@@ -61,13 +61,13 @@
             <div class="space">
                 <ul style="list-style: none; display: flex; padding-left: 0;">
                     <li class="btLogin">
-                        <a href="./inscrire.php">S'incrire
-                            <img src="./Image/Icons/sign-up-icon-signup-square-box-on-transparent-background-free-png.png" height="30px" alt="Image inscription">
+                        <a href="./inscrire.php"><span>S'incrire</span>
+                            <img src="./Image/Icons/edit_square.png" height="25px" alt="Image inscription">
                         </a>
                     </li>
                     <li class="btLogin">
-                        <a href="./connexion.php">Mon compte
-                            <img src="./Image/Icons/login_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" height="30px" alt="Image Connexion">
+                        <a href="./connexion.php"><span>Connexion</span>
+                            <img src="./Image/Icons/login_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" height="25px" alt="Image Connexion">
                         </a>
                     </li>
                 </ul>
