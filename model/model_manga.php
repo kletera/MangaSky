@@ -37,7 +37,7 @@ class Manga{
         $this->imgManga=$imgManga;
         return $this;
     }
-    public function setIdTypeManga(?int $idTypeManga):TypeManga{
+    public function setIdTypeManga(?int $idTypeManga):self{
         $this->idTypeManga = $idTypeManga;
         return $this;
     }
