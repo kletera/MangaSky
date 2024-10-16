@@ -12,24 +12,24 @@
 <body>
     <header>
         <nav class="navBarUp">
-        <a href="./index.html"><img src="./Image/LOGO Manga.png" class="logo" alt="Logo MangaSky"></a>
+        <a href="/MangaSky/"><img src="./Image/LOGO Manga.png" class="logo" alt="Logo MangaSky"></a>
         <div style="margin: auto 0;">
             <ul class="effectNav">
                 <div></div>
                 <li>
-                    <a href="./index.php">Accueil</a>
+                    <a href="/MangaSky/">Accueil</a>
                 </li>
                 <li>
                     <div></div>
-                    <a href="./autre.php">Nouveau</a>
+                    <a href="/MangaSky/nouveau">Nouveau</a>
                 </li>
                 <li>
                     <div></div>
-                    <a href="./Random.php">Random</a>
+                    <a href="/MangaSky/random">Random</a>
                 </li>
                 <li>
                     <div></div>
-                    <a href="./autre.php">Populaire</a>
+                    <a href="/MangaSky/populaire">Populaire</a>
                 </li>
             </ul>
             <button id="btMenuBurger">
@@ -39,16 +39,16 @@
             <ul id="burger" class="dis_none">
                 <button type="button" class="close"></button>
                 <li>
-                    <a href="./index.php">Accueil <span class="barreYellow"></span></a>
+                    <a href="/MangaSky/">Accueil <span class="barreYellow"></span></a>
                 </li>
                 <li>
-                    <a href="./autre.php">Nouveau <span class="barreYellow"></span></a>
+                    <a href="/MangaSky/nouveau">Nouveau <span class="barreYellow"></span></a>
                 </li>
                 <li>
-                    <a href="./autre.php">Random <span class="barreYellow"></span></a>
+                    <a href="/MangaSky/random">Random <span class="barreYellow"></span></a>
                 </li>
                 <li>
-                    <a href="./autre.php">Populaire <span class="barreYellow"></span></a>
+                    <a href="/MangaSky/populaire">Populaire <span class="barreYellow"></span></a>
                 </li>
             </ul>
         </div>
@@ -61,12 +61,12 @@
             <div class="space">
                 <ul style="list-style: none; display: flex; padding-left: 0;">
                     <li class="btLogin">
-                        <a href="./inscrire.php"><span>S'incrire</span>
+                        <a href="/MangaSky/inscription"><span>S'incrire</span>
                             <img src="./Image/Icons/edit_square.png" height="25px" alt="Image inscription">
                         </a>
                     </li>
                     <li class="btLogin">
-                        <a href="./connexion.php"><span>Connexion</span>
+                        <a href="/MangaSky/connexion"><span>Connexion</span>
                             <img src="./Image/Icons/login_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" height="25px" alt="Image Connexion">
                         </a>
                     </li>

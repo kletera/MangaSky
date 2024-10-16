@@ -10,8 +10,4 @@ $supStyle="<style>
         }
     </style>";
 
-    include 'view/view_header.php';
-    include 'view/view_autre.html';
-    include "view/view_footer1.php";
-
 ?>
