@@ -108,9 +108,20 @@ header .logo{
     margin: 0 15px !important;
     text-align: center;
 }
+/*
 .effectNav li a:hover, .effectNav li a:active{
     text-shadow: 0 0 10px #F5EF64, 0 0 20px #F5EF64, 0 0 40px #F5EF64;
     color: #fff;
+ }
+    */
+.effectNav li:hover.decoLink{
+    background-color: #F5EF64;
+    height: 10px;
+    width: 54px;
+    position: absolute;
+    border-radius: 2px;
+    margin-left: 5px;
+    
 }
 .navBarUp a, .navBarDown a{
     font-size: 13px;

@@ -15,21 +15,27 @@
         <a href="/MangaSky/"><img src="./Image/LOGO Manga.png" class="logo" alt="Logo MangaSky"></a>
         <div style="margin: auto 0;">
             <ul class="effectNav">
-                <div></div>
                 <li>
+                    <div class="decoLink"></div>
                     <a href="/MangaSky/">Accueil</a>
                 </li>
                 <li>
-                    <div></div>
+                    <div class="decoLink"></div>
                     <a href="/MangaSky/nouveau">Nouveau</a>
                 </li>
                 <li>
-                    <div></div>
+                    <div class="decoLink"></div>
                     <a href="/MangaSky/random">Random</a>
                 </li>
                 <li>
-                    <div></div>
+                    <div class="decoLink"></div>
                     <a href="/MangaSky/populaire">Populaire</a>
+                </li>
+                <li>
+                    <a href="/MangaSky/MonCompte" class="">Mon compte</a>
+                </li>
+                <li>
+                    <a href="" class="">Deconexion</a>
                 </li>
             </ul>
             <button id="btMenuBurger">
@@ -49,6 +55,9 @@
                 </li>
                 <li>
                     <a href="/MangaSky/populaire">Populaire <span class="barreYellow"></span></a>
+                </li>
+                <li>
+                    <a href="/MangaSky/MonCompte">Mon compte</a><a href="">Deconexion</a>
                 </li>
             </ul>
         </div>
