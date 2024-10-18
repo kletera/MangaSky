@@ -67,24 +67,22 @@ class Users{
     }
 
     // METHODE
-    public function addUser():string{
+    function addUser():string{
         //1Er Etape : Instancier l'objet de connexion PDO
         $bdd = new PDO('mysql:host=localhost;dbname=mangasky','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
         //Récupération des données de l'objet
         $email = $this->getEmail();
         $mdp = $this->getMdp();
-        $img_user = $this->getImg();
 
         //Try...Catch
         try{
             //2nd Etape : préparer ma requête INSERT INTO
-            $req = $bdd->prepare('INSERT INTO users (email_Users, mdp_Users,img_Users) VALUES (?,?,?,?)');
+            $req = $bdd->prepare('INSERT INTO users (email_Users, mdp_Users) VALUES (?,?)');
 
             //3eme Etape : Binding de Paramètre pour relier chaque ? à sa donnée
-            $req->bindParam(2,$email,PDO::PARAM_STR);
-            $req->bindParam(3,$mdp,PDO::PARAM_STR);
-            $req->bindParam(4,$img_user,PDO::PARAM_STR);
+            $req->bindParam(1,$email,PDO::PARAM_STR);
+            $req->bindParam(2,$mdp,PDO::PARAM_STR);
 
             //4eme Etape : exécution de la requête
             $req->execute();
@@ -96,11 +94,57 @@ class Users{
         }
     }
 
-    public function readUser(){
-        
+    function readUsers():array | string{
+        //1Er Etape : Instancier l'objet de connexion PDO
+        $bdd = new PDO('mysql:host=localhost;dbname=mangasky','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+        //Try...Catch
+        try{
+            //2nd Etape : préparer ma requête SELECT
+            $req = $bdd->prepare('SELECT id_Users, email_Users, mdp_Users, img_Users FROM users');
+
+            //3eme Etape : executer la requête
+            $req->execute();
+
+            //4eme Etape : Récupère les réponses de la BDD
+            $data = $req->fetchAll(PDO::FETCH_ASSOC);
+
+            //5eme Etape : je retourne mes $data
+            return $data;
+        }catch(EXCEPTION $error){
+            return $error->getMessage();
+        }
     }
 
+    //Fonction pour récupérer un utilisateurs en BDD selon un login précis
+    //Param : string
+    //Return : array | string
+    function readUserByEmail():array | string{
+        //1Er Etape : Instancier l'objet de connexion PDO
+        $bdd = new PDO('mysql:host=localhost;dbname=mangasky','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+        //Récupération du login depuis l'objet
+        $email = $this->getEmail();
+
+        //Try...Catch
+        try{
+            //2nd Etape : préparer ma requête SELECT
+            $req = $bdd->prepare('SELECT id_Users, email_Users, mdp_Users, img_Users FROM users WHERE email_Users = ?');
+
+            //3Eme Etape : introduire le login de l'utilisateur dans ma requête avec du Binding de Paramètre
+            $req->bindParam(1,$email,PDO::PARAM_STR);
+
+            //4eme Etape : executer la requête
+            $req->execute();
+
+            //5eme Etape : Récupère les réponses de la BDD
+            $data = $req->fetchAll(PDO::FETCH_ASSOC);
+
+            //6eme Etape : je retourne mes $data
+            return $data;
+        }catch(EXCEPTION $error){
+            return $error->getMessage();
+        }
+    }
 }
-
-
 ?>

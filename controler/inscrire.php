@@ -9,29 +9,58 @@ $titre='<title>Inscription</title>';
 $metaD='<meta name="description" content="Retrouvez les derniers scan de vos Manga préférer traduits en Français(fr) sur MangaSky.  Sans pub lisser en toute tranquillité." />';
 $supStyle="";
 
-
-
 function dataInscription(){
     //1er Etape de sécurité : vérifie si les champs obligatoires sont vides
     if(empty($_POST["email"]) || empty($_POST["password"]) || empty($_POST["verifpassword"])){
-        return ["name_user"=>'',"first_name_user"=>'',"login_user"=>'',"password_user"=>'',"erreur"=>'Veuillez remplir le Login ET le Mot de Passe !'];
+        return ["email"=>'',"mdp"=>'',"erreur"=>'Veuillez remplir le Login ET le Mot de Passe !'];
+    }
+    if($_POST["password"] !== $_POST["verifpassword"]){
+        return ["email"=>'',"mdp"=>'',"erreur"=>'Mot de passe différent'];
     }
 
     //2nd Etape de sécurité : nettoyage
-    $name_user = sanitize($_POST['name_user']);
-    $first_name_user = sanitize($_POST['first_name_user']);
-    $login_user = sanitize($_POST["login_user"]);
-    $password_user = sanitize($_POST["password_user"]);
+    $email = sanitize($_POST['email']);
+    $password = sanitize($_POST['password']);
+    $verifpassword = sanitize($_POST["verifpassword"]);
 
     //3eme Etape de sécurité : Vérifier que les données sont au bon format
-    if(!filter_var($login_user,FILTER_VALIDATE_EMAIL)){
-        return ["name_user"=>'',"first_name_user"=>'',"login_user"=>'',"password_user"=>'',"erreur"=>'Login pas au bon format !'];
+    if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        return ["email"=>'',"mdp"=>'',"erreur"=>'Login pas au bon format !'];
     }
 
     //4eme Etape de sécurité : hasher le mot de passe
-    $password_user = password_hash($password_user,PASSWORD_BCRYPT);
+    $mdp = password_hash($verifpassword,PASSWORD_BCRYPT);
 
-    return ["name_user"=>$name_user,"first_name_user"=>$first_name_user,"login_user"=>$login_user,"password_user"=>$password_user,"erreur"=>''];
+    return ["email"=>$email,"mdp"=>$mdp,"erreur"=>''];
+}
+// Enregistrement de l'utilisateur
+//Tester si le formulaire d'inscription m'est envoyé
+if(isset($_POST["inscription"])){
+    //Je lance le test de mes données
+    $tab = dataTestInscription();
+
+    //Je vérifie si je suis dans un cas d'erreur
+    if($tab['erreur'] != ''){
+        $mesage=$tab['erreur'];
+    }else{
+        //Création de mon $user à partir de ManagerUser
+        $user = new Users($tab['email']);
+        
+        //J'utilise les Setter pour donner à mon objet le nameUSer, firstNameUser et mdpUser
+        $user->setEmail($tab['email'])->setMdp($tab['mdp']);
+
+
+        //Je vérifie que le login est diponible
+        if(empty($user->readUserByEmail())){
+            //Si la réponse de la BDD est vide, alors le Login est disponible (car non trouvé en BDD), je peux donc l'utiliser.
+            //Je lance l'ajout de mon utilisateur en BDD
+            $mesage=$user->addUser();
+
+        }else{
+            //Si la réponse de la BDD n'est pas vide, alors ce le login est trouvé en BDD, donc le login n'est pas disponible, et je renvoie un message d'erreur
+            $mesage="Ce Login existe déjà en BDD !";
+        }
+    }
 }
 
 

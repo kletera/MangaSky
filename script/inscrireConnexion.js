@@ -30,7 +30,7 @@ toggleIns(password,passwordLab);
 const regexObj = {
     regexMail : /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/,
     charDecimal : /\d/,
-    charSpecial : /[$&@!]/,
+    charSpecial : /[$&@!.]/,
     xssPattern:/<script.*?>.*?<\/script>|<.*?onclick=.*?>|<.*?on\w+=".*?"/i
 };
 const divMail=document.querySelectorAll('.messageError')[0];
