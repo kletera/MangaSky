@@ -1,6 +1,15 @@
 <?php
 //J'active la session
 session_start();
+
+// Include dans tous les pages
+include 'utils/fonction.php';
+include 'model/model_commentUser.php';
+include 'model/model_manga.php';
+include 'model/model_typeManga.php';
+include 'model/model_users.php';
+include 'model/model_userType.php';
+
     
 //Analyse de l'URL avec parse_url() et retourne ses composants
 $url = parse_url($_SERVER['REQUEST_URI']);
@@ -9,8 +18,7 @@ $url = parse_url($_SERVER['REQUEST_URI']);
 $path = isset($url['path']) ? $url['path'] : '/';
 
 /*--------------------------ROUTER -----------------------------*/
-// INclude dans tous les pages
-include 'utils/fonction.php';
+
 
 //test de la valeur $path dans l'URL et import de la ressource
 switch($path){
@@ -65,7 +73,7 @@ switch($path){
         include "controler/connexion.php";
         //J'inclure mes views
         include './view/view_header.php';
-        include './view/view_connexion.html';
+        include './view/view_connexion.php';
         include './view/view_footer2.php';
         break;
     case $path ==='/MangaSky/inscription';
@@ -74,7 +82,7 @@ switch($path){
         include "controler/inscrire.php";
         //J'inclure mes views
         include './view/view_header.php';
-        include './view/view_inscrire.html';
+        include './view/view_inscrire.php';
         include './view/view_footer2.php';
         break;
     case $path === '/MangaSky/MonCompte';

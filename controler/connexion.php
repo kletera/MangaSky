@@ -2,12 +2,12 @@
     // Variable
     $link='<link rel="stylesheet" href="style/commun.css">
         <link rel="stylesheet" href="style/inscrireConnexion.css">';
-    $script='<script src="./script/inscrireConnexion.js" defer></script>
+    $script='
         <script src="./script/commun.js" defer></script>';
     $titre='<title>Connexion</title>';
     $metaD='<meta name="description" content="Retrouvez les derniers scan de vos Manga préférer traduits en Français(fr) sur MangaSky.  Sans pub lisser en toute tranquillité." />';
     $supStyle="";
-    $messageCo=";"
+    $messageCo="";
 
 function dataConnexion(){
     //1er Etape de sécurité : vérifie si les champs obligatoires sont vides
@@ -29,7 +29,7 @@ function dataConnexion(){
 
 if(isset($_POST['connexion'])){
     //je teste les données de connexion envoyés
-    $tab = dataTestConnexion();
+    $tab = dataConnexion();
 
     //je regarde si je suis dans le cas d'erreur
     if($tab['erreur'] != ''){

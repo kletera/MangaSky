@@ -2,12 +2,12 @@
 // Déclaration de variable
 $link='<link rel="stylesheet" href="style/commun.css">
     <link rel="stylesheet" href="style/inscrireConnexion.css">';
-$script='<script src="script/inscrireConnexion.js" defer></script>
-    <script src="script/inscription2.js" defer></script>
+$script='
     <script src="script/commun.js" defer></script>';
 $titre='<title>Inscription</title>';
 $metaD='<meta name="description" content="Retrouvez les derniers scan de vos Manga préférer traduits en Français(fr) sur MangaSky.  Sans pub lisser en toute tranquillité." />';
 $supStyle="";
+$mesage="";
 
 function dataInscription(){
     //1er Etape de sécurité : vérifie si les champs obligatoires sont vides
@@ -37,14 +37,14 @@ function dataInscription(){
 //Tester si le formulaire d'inscription m'est envoyé
 if(isset($_POST["inscription"])){
     //Je lance le test de mes données
-    $tab = dataTestInscription();
+    $tab = dataInscription();
 
     //Je vérifie si je suis dans un cas d'erreur
     if($tab['erreur'] != ''){
         $mesage=$tab['erreur'];
     }else{
         //Création de mon $user à partir de ManagerUser
-        $user = new Users($tab['email']);
+        $user = new Users(null,$tab['email']);
         
         //J'utilise les Setter pour donner à mon objet le nameUSer, firstNameUser et mdpUser
         $user->setEmail($tab['email'])->setMdp($tab['mdp']);
@@ -62,6 +62,5 @@ if(isset($_POST["inscription"])){
         }
     }
 }
-
 
 ?>

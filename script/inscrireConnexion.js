@@ -95,10 +95,11 @@ password.addEventListener('keyup',()=>{
 document.body.addEventListener('click',()=>{
     divPassword.classList.remove('popUp');
 })
-
+/*
 // Submit+Connexion
 const form=document.querySelector('main form');
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
 })
+    */

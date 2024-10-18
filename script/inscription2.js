@@ -14,8 +14,5 @@ confirmation.addEventListener('keyup',()=>{
         errorMsg+='Les Mot de passe ne correspondent pas';
         password.style.border='1px solid red'
     }
-    if(confirmation.value.match(regexObj.xssPattern)){
-        // document.location.replace('')
-    }
     divConf.innerText=errorMsg;
 });

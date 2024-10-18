@@ -1,7 +1,7 @@
 <?php
 class Users{
     private ?int $idUsers;
-    private ?string  $pseudo;
+    private ?string $pseudo;
     private ?string $email;
     private ?string $mdp;
     private ?string $img;

@@ -101,11 +101,14 @@ footer{
     width: 100%;
     font-size: 12px;
 }
-#formIn input[type="submit"], #formCo input[type="submit"]{
-    margin-top: 20px;
+input[type="submit"]{
+    margin-top: 10px;
     background-color: #F5EF64;
     text-transform: uppercase;
     padding: 12px;
+}
+input[type="submit"]:hover{
+    border: 1px solid black;
 }
 .label_incription{
     margin-bottom: 10px;
