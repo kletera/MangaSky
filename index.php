@@ -98,8 +98,10 @@ switch($path){
         // controler
         include "controler/deco.php";
         break;
-    
-        
+    //page pardefault
+    default :
+        echo '404';
+        break;
 }   
 
 ?>

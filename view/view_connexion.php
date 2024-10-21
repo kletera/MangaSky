@@ -15,11 +15,11 @@
                     <li class="txtError"></li>
                     <li class="txtError"></li>
                 </ul>
+                <span style="color:red"><?php echo $messageCo?></span>
             </div>
             <input type="submit" value="Connexion" name="connexion">
             <p style="display: flex; justify-content: space-between;">Mot de passe oublié ?
                 <a href="/MangaSky/inscription">Créer un compte</a>
             </p>
-            <p><?php echo $messageCo?></p>
         </form>
     </main>
