@@ -32,10 +32,10 @@
                     <a href="/MangaSky/populaire">Populaire</a>
                 </li>
                 <li>
-                    <a href="/MangaSky/MonCompte" class="">Mon compte</a>
+                    <a href="/MangaSky/MonCompte" class="<?php echo $class ?>">Mon compte</a>
                 </li>
                 <li>
-                    <a href="" class="">Deconexion</a>
+                    <a href="/MangaSky/Deconnexion" class="<?php echo $class ?>">Deconexion</a>
                 </li>
             </ul>
             <button id="btMenuBurger">
@@ -56,9 +56,9 @@
                 <li>
                     <a href="/MangaSky/populaire">Populaire <span class="barreYellow"></span></a>
                 </li>
-                <li>
-                    <a href="/MangaSky/MonCompte">Mon compte</a><a href="">Deconexion</a>
-                </li>
+                <div id="coDex">
+                    <a href="/MangaSky/MonCompte">Mon compte</a><a href="/MangaSky/Deconnexion">Deconexion</a>
+                </div>
             </ul>
         </div>
         </nav>

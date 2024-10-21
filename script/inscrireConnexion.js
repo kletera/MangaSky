@@ -5,6 +5,14 @@ const mailLab=document.querySelectorAll('.label_incription label')[0];
 const password=document.querySelectorAll('main form input')[1];
 const passwordLab=document.querySelectorAll('.label_incription label')[1];
 
+const divMail=document.querySelectorAll('.messageError')[0];
+
+// Password
+const divPassword=document.querySelectorAll('.messageError')[1];
+const txtEr1=document.querySelectorAll('.txtError')[0];
+const txtEr2=document.querySelectorAll('.txtError')[1];
+const txtEr3=document.querySelectorAll('.txtError')[2];
+
 //Swich in input 
 function toggleIns(a,b){
     a.addEventListener('click',()=>{
@@ -33,7 +41,7 @@ const regexObj = {
     charSpecial : /[$&@!.]/,
     xssPattern:/<script.*?>.*?<\/script>|<.*?onclick=.*?>|<.*?on\w+=".*?"/i
 };
-const divMail=document.querySelectorAll('.messageError')[0];
+
 
 mail.addEventListener('keyup',()=>{
     let errorMsg = '';
@@ -55,12 +63,6 @@ mail.addEventListener('keyup',()=>{
     }
     divMail.innerText=errorMsg;
 });
-
-// Password
-const divPassword=document.querySelectorAll('.messageError')[1];
-const txtEr1=document.querySelectorAll('.txtError')[0];
-const txtEr2=document.querySelectorAll('.txtError')[1];
-const txtEr3=document.querySelectorAll('.txtError')[2];
 
 password.addEventListener('keyup',()=>{
     passwordLab.classList.add('labelUpError');
@@ -86,15 +88,13 @@ password.addEventListener('keyup',()=>{
     }else{
         txtEr3.innerText='';
     }
-    if(password.value.match(regexObj.xssPattern)){
-        // document.location.replace('')
-    }
     divPassword.classList.add('popUp');
 });
 // Remove popUp 
 document.body.addEventListener('click',()=>{
     divPassword.classList.remove('popUp');
 })
+
 /*
 // Submit+Connexion
 const form=document.querySelector('main form');

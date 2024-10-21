@@ -249,6 +249,15 @@ header .logo{
 #burger li:hover{
     background: linear-gradient(40deg,#64C7F5 50%,#F5EF64);
 }
+#coDex{
+    display:flex; 
+    justify-content:space-around;
+}
+#coDex a{
+    background-color: #64C7F5;
+    border: solid 1px black ;
+}
+
 .close{
     background-image: url(../Image/Icons/close.png);
     width: 40px;
