@@ -5,12 +5,12 @@ class Users{
     private ?string $email;
     private ?string $mdp;
     private ?string $img;
-    private ?int $idManga;
-    private ?int $idTypeUsers;
+    private ?string $isActive;
+    private Manga $idManga;
+    private UserType $idTypeUsers;
 
     // Constructeur
-    public function __construct(?string  $pseudo,?string $email){
-        $this->pseudo=$pseudo;
+    public function __construct(?string $email){
         $this->email=$email;
     }
     // GETTER
@@ -29,10 +29,13 @@ class Users{
     public function getImg():?string{
         return $this->img;
     }
-    public function getIdManga():?int{
+    public function getIsActive():?string{
+        return $this->isActive;
+    }
+    public function getIdManga():Manga{
         return $this->idManga;
     }
-    public function getIdTypeUsers():?int{
+    public function getIdTypeUsers():UserType{
         return $this->idTypeUsers;
     }
 
@@ -57,11 +60,15 @@ class Users{
         $this->img = $img;
         return $this;
     }
-    public function setIdManga(?int $idManga):self{
+    public function setIsActive(?string $isActive):self{
+        $this->isActive = $isActive;
+        return $this;
+    }
+    public function setIdManga( Manga $idManga):self{
         $this->idManga = $idManga;
         return $this;
     }
-    public function setIdTypeUsers(?int $idTypeUsers):self{
+    public function setIdTypeUsers(UserType $idTypeUsers):self{
         $this->idTypeUsers = $idTypeUsers;
         return $this;
     }
@@ -70,19 +77,21 @@ class Users{
     function addUser():string{
         //1Er Etape : Instancier l'objet de connexion PDO
         $bdd = new PDO('mysql:host=localhost;dbname=mangasky','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
+        
         //Récupération des données de l'objet
         $email = $this->getEmail();
         $mdp = $this->getMdp();
+        $img="https://e7.pngegg.com/pngimages/99/998/png-clipart-computer-icons-user-profile-50-face-heroes.png";
 
         //Try...Catch
         try{
             //2nd Etape : préparer ma requête INSERT INTO
-            $req = $bdd->prepare('INSERT INTO users (email_Users, mdp_Users) VALUES (?,?)');
+            $req = $bdd->prepare('INSERT INTO users(email_Users, mdp_Users, img_Users) VALUE (?,?,?)');
 
             //3eme Etape : Binding de Paramètre pour relier chaque ? à sa donnée
             $req->bindParam(1,$email,PDO::PARAM_STR);
             $req->bindParam(2,$mdp,PDO::PARAM_STR);
+            $req->bindParam(3,$img,PDO::PARAM_STR);
 
             //4eme Etape : exécution de la requête
             $req->execute();
@@ -98,10 +107,11 @@ class Users{
         //1Er Etape : Instancier l'objet de connexion PDO
         $bdd = new PDO('mysql:host=localhost;dbname=mangasky','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
+
         //Try...Catch
         try{
             //2nd Etape : préparer ma requête SELECT
-            $req = $bdd->prepare('SELECT id_Users, email_Users, mdp_Users, img_Users FROM users');
+            $req = $bdd->prepare('SELECT id_Users, email_Users, mdp_Users FROM users');
 
             //3eme Etape : executer la requête
             $req->execute();
@@ -129,7 +139,7 @@ class Users{
         //Try...Catch
         try{
             //2nd Etape : préparer ma requête SELECT
-            $req = $bdd->prepare('SELECT id_Users, email_Users, mdp_Users, img_Users FROM users WHERE email_Users = ?');
+            $req = $bdd->prepare('SELECT id_Users, email_Users, mdp_Users FROM users WHERE email_Users = ?');
 
             //3Eme Etape : introduire le login de l'utilisateur dans ma requête avec du Binding de Paramètre
             $req->bindParam(1,$email,PDO::PARAM_STR);

@@ -24,6 +24,8 @@
                 <label for="verifpassword" class="labelDow">Confirmation mot de passe</label>
                 <div class="messageError"></div>
             </div>
+            <p class="messageError"><?php echo $mesage ?></p>
+            
             <input type="submit" value="Inscription" name="inscription">
             <p>Vous avez déjà un compte ?<a href="/MangaSky/connexion">Connexion</a></p>
             <p><?php $mesage ?></p>

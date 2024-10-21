@@ -36,7 +36,7 @@ if(isset($_POST['connexion'])){
         //si c'est le cas : j'affiche l'erreur
         $messageCo = $tab['erreur'];
     }else{
-        $user= new Users(null, $tab['loginCo']);
+        $user= new Users($tab['loginCo']);
         //Si tout s'est bien passé :
         //Interroger la BDD pour récupérer les données de l'utilisateurs à partir du login entré
         $data = $user->readUserByEmail();
@@ -54,18 +54,20 @@ if(isset($_POST['connexion'])){
             }else{
                 //Si on trouve le login en BDD
                 //Je vérifie la correspondance des mots de passe
-                if(!password_verify($tab['passwordCo'],$data[0]['mdp_user'])){
+                if(!password_verify($tab['passwordCo'],$data[0]['mdp_Users'])){
                     //Si les mots de passe ne correspondent pas, j'affiche un message d'erreur
                     $messageCo = "Erreur de Login et/ou de Mot de Passe !";
                 }else{
                     //Si les mots de passe correspondent, j'enregistre les données de l'utilisateur en SESSION, et j'affiche un message de confimation
                     $_SESSION['id_Users'] = $data[0]['id_Users'];
                     $_SESSION['pseudo_Users'] = $data[0]['pseudo_Users'];
+                    $_SESSION['mdp_Users'] = $data[0]['mdp_Users'];
                     $_SESSION['email_Users'] = $data[0]['email_Users'];
                     $_SESSION['img_Users'] = $data[0]['img_Users'];
                     $_SESSION['id_Manga'] = $data[0]['id_Manga'];
                     $_SESSION['id_User_Type'] = $data[0]['id_User_Type'];
                     
+                    header('Location:/MangaSky/MonCompte');
                 }
             }
         }

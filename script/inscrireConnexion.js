@@ -15,16 +15,16 @@ function toggleIns(a,b){
 toggleIns(mail,mailLab);
 toggleIns(password,passwordLab);
 
-// function togBody(a,b){
-//     main.addEventListener('click',()=>{
-//         if(a.value.length==0){
-//             b.classList.remove('labelUp');
-//             b.classList.add('labelDow');
-//         }
-//     })
-// }
-// togBody(mail,mailLab);
-// togBody(password,passwordLab);
+function togBody(a,b){
+    main.addEventListener('click',()=>{
+        if(a.value.length==0){
+             b.classList.remove('labelUp');
+             b.classList.add('labelDow');
+        }
+    })
+}
+togBody(mail,mailLab);
+togBody(password,passwordLab);
 
 // Sécuriter
 const regexObj = {

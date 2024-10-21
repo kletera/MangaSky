@@ -3,7 +3,7 @@ class CommentUser{
     // Attributs
     private ?int $idCommentUser;
     private ?string $textComment;
-    private ?int $idUser;
+    private ?Users $idUser;
 
     // Constructeurs
     public function __construct(){

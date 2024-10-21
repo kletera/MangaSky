@@ -4,7 +4,7 @@ class Manga{
     private ?int $idManga;
     private ?string $nameManga;
     private ?string $imgManga;
-    private ?int $idTypeManga;
+    private ?TypeManga $idTypeManga;
 
     // Constructeurs
     public function __construct(?string $nameManga){
