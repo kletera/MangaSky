@@ -81,7 +81,7 @@ class Users{
         //Récupération des données de l'objet
         $email = $this->getEmail();
         $mdp = $this->getMdp();
-        $img="https://e7.pngegg.com/pngimages/99/998/png-clipart-computer-icons-user-profile-50-face-heroes.png";
+        $img="https://www.pngall.com/wp-content/uploads/5/Profile-Male.png";
 
         //Try...Catch
         try{
