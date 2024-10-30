@@ -89,7 +89,7 @@ header{
 }
 header .logo{
     float: left;
-    margin-left: 15px;
+    margin-left: 22px;
 }
 .effectNav {
     display: flex;
@@ -154,7 +154,7 @@ header .logo{
 }
 
 .barSearch{
-    margin: 14px;
+    margin: 14px 0;
     float: left;
     align-self: center;
 }
@@ -176,7 +176,7 @@ header .logo{
 }
 .space{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .btLogin a{
     background-color: #F5EF64;

@@ -26,7 +26,7 @@
             </div>
             <p class="messageError"><?php echo $mesage ?></p>
             
-            <input type="submit" value="Inscription" name="inscription">
+            <input type="submit" value="Inscription" name="inscription" style="padding: 12px;">
             <p>Vous avez déjà un compte ?<a href="/MangaSky/connexion">Connexion</a></p>
             <p><?php $mesage ?></p>
         </form>

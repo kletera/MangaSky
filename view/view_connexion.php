@@ -17,7 +17,7 @@
                 </ul>
                 <span style="color:red"><?php echo $messageCo?></span>
             </div>
-            <input type="submit" value="Connexion" name="connexion">
+            <input type="submit" value="Connexion" name="connexion" style="padding: 12px;">
             <p style="display: flex; justify-content: space-between;">Mot de passe oublié ?
                 <a href="/MangaSky/inscription">Créer un compte</a>
             </p>

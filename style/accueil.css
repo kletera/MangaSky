@@ -108,6 +108,7 @@ main{
 .contain{
     font-family: 'Liberation Sans';
     overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 /* bouton suivant */

@@ -13,28 +13,37 @@
     box-sizing: border-box;
     padding-left: 10px;
 }
-/* .libraryItem img{
-
-} */
+/* Bibliothèque */
+.biblio{
+    display: flex;
+    flex-wrap: wrap;
+}
+.libraryItem{
+    margin: 0 5px 10px 5px;
+    height: 175px;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+.libraryItem img{
+    height: 175px;
+}
 .libraryItem div{
+    margin: 0;
     position: relative;
-    bottom: 0;
+    bottom: 34px;
     left: 0;
-    padding: 10px;
-    width: 100%;
-    overflow: hidden;
-    background-color: #F5EF64;
+    padding: 0 3px 10px;
+    text-align: center;
 }
 .libraryItem div p{
-    text-align: center;
+    margin: 0;
+    padding: 2px 0;
+    background-color: #F5EF64;
+    border-radius: 10px;
 }
 
 @media screen and(max-width:760px) {
     .libraryItem{
         max-width: 25%;
     }
-}
-.biblio{
-    display: flex;
-    flex-wrap: wrap;
 }
