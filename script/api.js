@@ -1,8 +1,8 @@
 // Api Genre manga
 const MangaApiGenre =  async () => {
-    const data = await fetch('https://api.jikan.moe/v4/genres/manga');
-    const dataTransformed = await  data.json();
-    console.log(dataTransformed);
+    const url = await fetch('https://api.jikan.moe/v4/genres/manga');
+    const data = await  url.json();
+    console.log(data);
 };
 
 // Api manga 
@@ -22,11 +22,19 @@ const MangaApi =  async () => {
 };
 MangaApi();
 
+const topManga= async () => {
+    const url = await fetch('https://api.jikan.moe/v4/top/manga');
+    const data = await  url.json();
+    console.log(data);
+
+}
+topManga();
+
 // Api manga random
 const RandomApi=async()=>{
-    const data=await fetch('https://api.jikan.moe/v4/random/manga');
-    const dataTransformed=await data.json;
-    console.log(dataTransformed);
+    const url=await fetch('https://api.jikan.moe/v4/random/manga');
+    const data = await url.json;
+    console.log(data);
 }
 
 const list=document.querySelector('.bt_pg_next');
