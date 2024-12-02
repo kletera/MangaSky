@@ -2,12 +2,64 @@
 const MangaApiGenre =  async () => {
     const url = await fetch('https://api.jikan.moe/v4/genres/manga');
     const data = await  url.json();
-    console.log(data);
+    // console.log(data);
 };
+const GetMangaById =  async () => {
+    let id=1;
+    const url = await fetch(`https://api.jikan.moe/v4/manga/${id}`);
+    const data = await  url.json();
+    // console.log(data);
+};
+// GetMangaById();
+
+// Api manga random
+const RandomApi=async()=>{
+    const url=await fetch('https://api.jikan.moe/v4/random/manga');
+    const data = await url.json;
+    // console.log(data);
+}
+
+const ApiTopManga= async () => {
+    const url = await fetch('https://api.jikan.moe/v4/top/manga');
+    const data = await  url.json();
+    console.log(data.data);
+    for(let i=0; i<5;i++){
+
+        let genre=[];
+        let img=data.data[i].images.jpg.image_url;
+        let nom=data.data[i].title;
+        for(let f=0;f<data.data[i].genres.length;f++){
+            genre.push(data.data[i].genres[f].name);
+        }
+        console.log(genre);
+        addTopManga(i,img,nom,genre);
+    }
+
+}
+ApiTopManga();
+
+function addTopManga(nb,img,nom,genre){
+    // Récupation du html
+    const aside=document.querySelectorAll('.aside_section')[nb];
+    const image=document.querySelectorAll('.aside_section img')[nb];
+    const name=document.querySelectorAll('.asideUl li h3 a')[nb];
+    const divGenre=document.querySelectorAll('.genreAside')[nb];
+
+    // insertion des donner de l'api
+    image.src=img;
+    image.alt=`Couverture ${nom}`
+    name.innerText=nom;
+    for(let i=0; i<genre.length; i++){
+        const genreList=document.createElement('a');
+        genreList.innerText=genre[i]+", ";
+        divGenre.append(genreList);
+    }
+}
 
 // Api manga 
 const MangaApi =  async () => {
-    const url = await fetch('https://api.jikan.moe/v4/manga');
+    let n=1;
+    const url = await fetch(`https://api.jikan.moe/v4/manga?page=${n}`);
     const data = await  url.json();
     console.log(data.data);
     for(i=0;i<data.data.length;i++){
@@ -22,25 +74,9 @@ const MangaApi =  async () => {
 };
 MangaApi();
 
-const topManga= async () => {
-    const url = await fetch('https://api.jikan.moe/v4/top/manga');
-    const data = await  url.json();
-    console.log(data);
-
-}
-topManga();
-
-// Api manga random
-const RandomApi=async()=>{
-    const url=await fetch('https://api.jikan.moe/v4/random/manga');
-    const data = await url.json;
-    console.log(data);
-}
-
-const list=document.querySelector('.bt_pg_next');
-
 // Ajout des element HTML de l'accueil a partire de l'api Manga Api
 function addItem(nom,portait, chapitre1,chapitre2,chapitre3,temp){
+    const list=document.querySelector('.bt_pg_next');
     // Creation des element et de leur style + attribut
     const article=document.createElement('article');
         article.classList.add("itemupdate");
@@ -112,3 +148,4 @@ function addItem(nom,portait, chapitre1,chapitre2,chapitre3,temp){
                 lichapitre3.append(span3);
     list.before(article);
 }
+
