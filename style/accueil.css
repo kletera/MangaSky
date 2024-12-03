@@ -141,9 +141,18 @@ main{
     background-color: white;
     list-style: none;
 }
-.containerMainRight a{
-    text-decoration: none;
-    color: #000;
+.calendar li{
+    width: 100%;
+}
+.colorCalandar{
+    background-color: #64C7F5 !important;
+    border-radius: 5px;
+}
+.calendar li button{
+    border: none;
+    width: 100%;
+    padding: 6px 0;
+    background-color: white;
 }
 .border_number{
     display: flex;
@@ -171,7 +180,7 @@ main{
     list-style: none;
     padding-left: 10px;
     margin: 0;
-    flex-wrap: wrap;
+    width: 175px;
 }
 .genreAside{
     display: flex; 

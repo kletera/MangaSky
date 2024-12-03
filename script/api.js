@@ -19,32 +19,28 @@ const RandomApi=async()=>{
     // console.log(data);
 }
 
+// Api Top manga tous
 const ApiTopManga= async () => {
-    const url = await fetch('https://api.jikan.moe/v4/top/manga');
+    const url = await fetch('https://api.jikan.moe/v4/top/manga?filter=bypopularity');
     const data = await  url.json();
-    console.log(data.data);
     for(let i=0; i<5;i++){
-
         let genre=[];
         let img=data.data[i].images.jpg.image_url;
         let nom=data.data[i].title;
         for(let f=0;f<data.data[i].genres.length;f++){
             genre.push(data.data[i].genres[f].name);
         }
-        console.log(genre);
         addTopManga(i,img,nom,genre);
     }
-
 }
-ApiTopManga();
 
+// Ajout des insformation de l'api
 function addTopManga(nb,img,nom,genre){
     // Récupation du html
-    const aside=document.querySelectorAll('.aside_section')[nb];
     const image=document.querySelectorAll('.aside_section img')[nb];
     const name=document.querySelectorAll('.asideUl li h3 a')[nb];
     const divGenre=document.querySelectorAll('.genreAside')[nb];
-
+    
     // insertion des donner de l'api
     image.src=img;
     image.alt=`Couverture ${nom}`
@@ -55,6 +51,25 @@ function addTopManga(nb,img,nom,genre){
         divGenre.append(genreList);
     }
 }
+// activation de l'api
+const semaine=document.querySelectorAll('.calendar li button')[0];
+const mensuel=document.querySelectorAll('.calendar li button')[1];
+const tous=document.querySelectorAll('.calendar li button')[2];
+
+function clickAsside(ad,rm1,rm2,api){
+    ad.addEventListener('click',()=>{
+        if(!ad.classList.contains('colorCalandar')){
+            api;
+            rm1.classList.remove('colorCalandar');
+            rm2.classList.remove('colorCalandar');
+            ad.classList.add('colorCalandar');
+        }
+    });
+}
+clickAsside(tous,semaine,mensuel,ApiTopManga());
+
+clickAsside(semaine,mensuel,tous,ApiTopManga());
+clickAsside(mensuel,semaine,tous,ApiTopManga());
 
 // Api manga 
 const MangaApi =  async () => {
@@ -115,8 +130,8 @@ function addItem(nom,portait, chapitre1,chapitre2,chapitre3,temp){
 
     // insertion des donner de l'api
     img.src=portait;
-    img.alt="Image ",nom;
-    img.title="Image ",nom;
+    img.alt="Image "+nom;
+    img.title="Image "+nom;
     titre.innerText=nom;
     if(chapitre1>0){
         aChapitre1.innerText=`Chapitre ${chapitre1}`;
