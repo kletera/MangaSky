@@ -3,13 +3,13 @@
             <img src="./Image/LOGO Manga.png" alt="Logo">
             <h2>Connexion</h2>
             <div class="label_incription">
-                <input type="email" name="loginCo" id="loginCo" maxlength="50">
-                <label for="emailCo" class="labelDow" required>E-mail</label>
+                <input type="email" name="loginCo" id="loginCo" maxlength="50" required>
+                <label for="emailCo" class="labelDow">E-mail</label>
                 <div class="messageError"></div>
             </div>
             <div class="label_incription">
-                <input type="password" name="passwordCo" id="passwordCo">
-                <label for="passwordCO" class="labelDow" required>Mot de passe</label>
+                <input type="password" name="passwordCo" id="passwordCo" maxlength="50" required>
+                <label for="passwordCO" class="labelDow">Mot de passe</label>
                 <ul class="messageError dis_none">
                     <li class="txtError"></li>
                     <li class="txtError"></li>
