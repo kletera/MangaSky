@@ -21,16 +21,23 @@ const RandomApi=async()=>{
 
 // Api Top manga tous
 const ApiTopManga= async () => {
-    const url = await fetch('https://api.jikan.moe/v4/top/manga?filter=bypopularity');
-    const data = await  url.json();
-    for(let i=0; i<5;i++){
-        let genre=[];
-        let img=data.data[i].images.jpg.image_url;
-        let nom=data.data[i].title;
-        for(let f=0;f<data.data[i].genres.length;f++){
-            genre.push(data.data[i].genres[f].name);
+    try{
+        const url = await fetch('https://api.jikan.moe/v4/top/manga?filter=bypopularity');
+        if (!url.ok){
+            throw new Error(`Erreur: ${url.status}`); 
+        } 
+        const data = await  url.json();
+        for(let i=0; i<5;i++){
+            let genre=[];
+            let img=data.data[i].images.jpg.image_url;
+            let nom=data.data[i].title;
+            for(let f=0;f<data.data[i].genres.length;f++){
+                genre.push(data.data[i].genres[f].name);
+            }
+            addTopManga(i,img,nom,genre);
         }
-        addTopManga(i,img,nom,genre);
+    }catch(error) {
+        console.error("Erreur lors de la récupération des mangas :", error);
     }
 }
 

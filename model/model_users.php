@@ -76,7 +76,7 @@ class Users{
     // METHODE
     function addUser():string{
         //1Er Etape : Instancier l'objet de connexion PDO
-        $bdd = new PDO('mysql:host=localhost;dbname=mangasky','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $bdd = new PDO('mysql:host='.$_ENV['host'].';dbname='.$_ENV['db'],$_ENV['user'],$_ENV['pws'],array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         
         //Récupération des données de l'objet
         $email = $this->getEmail();
@@ -105,7 +105,7 @@ class Users{
 
     function readUsers():array | string{
         //1Er Etape : Instancier l'objet de connexion PDO
-        $bdd = new PDO('mysql:host=localhost;dbname=mangasky','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $bdd = new PDO('mysql:host='.$_ENV['host'].';dbname='.$_ENV['db'],$_ENV['user'],$_ENV['pws'],array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
         //Try...Catch
@@ -131,7 +131,8 @@ class Users{
     //Return : array | string
     function readUserByEmail():array | string{
         //1Er Etape : Instancier l'objet de connexion PDO
-        $bdd = new PDO('mysql:host=localhost;dbname=mangasky','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $bdd = new PDO('mysql:host='.$_ENV['host'].';dbname='.$_ENV['db'],$_ENV['user'],
+        $_ENV['pws'],array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
         //Récupération du login depuis l'objet
         $email = $this->getEmail();
