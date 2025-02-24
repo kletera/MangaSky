@@ -22,79 +22,65 @@ $path = isset($url['path']) ? $url['path'] : '/';
 
 //test de la valeur $path dans l'URL et import de la ressource
 switch($path){
-    case $path === '/MangaSky/';
-        //J'inclus les fichiers model dont j'ai besoin
+    case  '/MangaSky/':
         // controler
         include "controler/accueil.php";
         //J'inclure mes views
-        include './view/view_header.php';
+        include 'view/view_header.php';
         include 'view/view_index.html';
-        include './view/view_footer1.php';
+        include 'view/view_footer1.php';
         break;
-    case $path ==='/MangaSky/nouveau';
-        //J'inclus les fichiers model dont j'ai besoin
+    case '/MangaSky/nouveau':
+    case '/MangaSky/random':
+    case '/MangaSky/populaire':
         // controler
         include "controler/Random.php";
         //J'inclure mes views
-        include './view/view_header.php';
-        include './view/view_autre.html';
-        include './view/view_footer1.php';
+        include 'view/view_header.php';
+        include 'view/view_autre.html';
+        include 'view/view_footer1.php';
         break;
-    case $path ==='/MangaSky/random';
-        //J'inclus les fichiers model dont j'ai besoin
-        // controler
-        include "controler/Random.php";
-        //J'inclure mes views
-        include './view/view_header.php';
-        include './view/view_autre.html';
-        include './view/view_footer1.php';
-        break;
-    case $path ==='/MangaSky/populaire';
-        //J'inclus les fichiers model dont j'ai besoin
-        // controler
-        include "controler/Random.php";
-        //J'inclure mes views
-        include './view/view_header.php';
-        include './view/view_autre.html';
-        include './view/view_footer1.php';
-        break;
-    case $path ==='/MangaSky/manga';
-        //J'inclus les fichiers model dont j'ai besoin
+    case '/MangaSky/manga':
         // controler
         include "controler/manga.php";
         //J'inclure mes views
-        include './view/view_header.php';
-        include './view/view_manga.html';
-        include './view/view_footer1.php';
+        include 'view/view_header.php';
+        include 'view/view_manga.html';
+        include 'view/view_footer1.php';
         break;
-    case $path ==='/MangaSky/connexion';
-        //J'inclus les fichiers model dont j'ai besoin
+    case '/MangaSky/manga/chapitre':
+        // controler
+        include "controler/chapitre.php";
+        //J'inclure mes views
+        include 'view/view_header.php';
+        include 'view/view_chapitre.php';
+        include 'view/view_footer1.php';
+    break;
+    case '/MangaSky/connexion':
         // controler
         include "controler/connexion.php";
         //J'inclure mes views
-        include './view/view_header.php';
-        include './view/view_connexion.php';
-        include './view/view_footer2.php';
+        include 'view/view_header.php';
+        include 'view/view_connexion.php';
+        include 'view/view_footer2.php';
         break;
-    case $path ==='/MangaSky/inscription';
-        //J'inclus les fichiers model dont j'ai besoin
+    case '/MangaSky/inscription':
         // controler
         include "controler/inscrire.php";
         //J'inclure mes views
-        include './view/view_header.php';
-        include './view/view_inscrire.php';
-        include './view/view_footer2.php';
+        include 'view/view_header.php';
+        include 'view/view_inscrire.php';
+        include 'view/view_footer2.php';
         break;
-    case $path === '/MangaSky/MonCompte';
-        //J'inclus les fichiers model dont j'ai besoin
+    case '/MangaSky/MonCompte':
         // controler
         include "controler/compte.php";
         //J'inclure mes views
-        include './view/view_header.php';
-        include './view/view_compte.html';
-        include './view/view_footer1.php';
+        include 'view/view_header.php';
+        include 'view/view_compte.html';
+        include 'view/view_footer1.php';
         break;
-    case $path ==='/MangaSky/Deconnexion';
+    case '/MangaSky/Deconnexion':
         // controler
         include "controler/deco.php";
         break;
