@@ -19,7 +19,7 @@ const RandomApi=async()=>{
     // console.log(data);
 }
 
-// Api Top manga tous
+// Api Top manga all
 const ApiTopManga= async () => {
     try{
         const url = await fetch('https://api.jikan.moe/v4/top/manga?filter=bypopularity');
@@ -41,14 +41,14 @@ const ApiTopManga= async () => {
     }
 }
 
-// Ajout des insformation de l'api
+// Adding API information
 function addTopManga(nb,img,nom,genre){
     // Récupation du html
     const image=document.querySelectorAll('.aside_section img')[nb];
     const name=document.querySelectorAll('.asideUl li h3 a')[nb];
     const divGenre=document.querySelectorAll('.genreAside')[nb];
     
-    // insertion des donner de l'api
+    // Inserting data from the api
     image.src=img;
     image.alt=`Couverture ${nom}`
     name.innerText=nom;
@@ -58,7 +58,7 @@ function addTopManga(nb,img,nom,genre){
         divGenre.append(genreList);
     }
 }
-// activation de l'api
+// API activation
 const semaine=document.querySelectorAll('.calendar li button')[0];
 const mensuel=document.querySelectorAll('.calendar li button')[1];
 const tous=document.querySelectorAll('.calendar li button')[2];
@@ -74,7 +74,6 @@ function clickAsside(ad,rm1,rm2,api){
     });
 }
 clickAsside(tous,semaine,mensuel,ApiTopManga());
-
 clickAsside(semaine,mensuel,tous,ApiTopManga());
 clickAsside(mensuel,semaine,tous,ApiTopManga());
 
