@@ -8,7 +8,7 @@ include 'model/model_commentUser.php';
 include 'model/model_manga.php';
 include 'model/model_typeManga.php';
 include 'model/model_users.php';
-include 'model/model_userType.php';
+include 'model/model_role.php';
 
 
 //Analyse de l'URL avec parse_url() et retourne ses composants

@@ -6,8 +6,7 @@ class Users{
     private ?string $mdp;
     private ?string $img;
     private ?string $isActive;
-    private Manga $idManga;
-    private UserType $idTypeUsers;
+    private Role $idRole;
 
     // Constructeur
     public function __construct(?string $email){
@@ -32,11 +31,8 @@ class Users{
     public function getIsActive():?string{
         return $this->isActive;
     }
-    public function getIdManga():Manga{
-        return $this->idManga;
-    }
-    public function getIdTypeUsers():UserType{
-        return $this->idTypeUsers;
+    public function getIdRole():Role{
+        return $this->idRole;
     }
 
     // SETTER
@@ -64,12 +60,8 @@ class Users{
         $this->isActive = $isActive;
         return $this;
     }
-    public function setIdManga( Manga $idManga):self{
-        $this->idManga = $idManga;
-        return $this;
-    }
-    public function setIdTypeUsers(UserType $idTypeUsers):self{
-        $this->idTypeUsers = $idTypeUsers;
+    public function setIdRole(Role $idRole):self{
+        $this->idRole = $idRole;
         return $this;
     }
 
