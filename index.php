@@ -3,6 +3,7 @@
 session_start();
 
 // Include dans tous les pages
+include 'env.php';
 include 'utils/fonction.php';
 include 'model/model_commentUser.php';
 include 'model/model_manga.php';

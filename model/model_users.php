@@ -5,7 +5,7 @@ class Users{
     private ?string $email;
     private ?string $mdp;
     private ?string $img;
-    private ?string $isActive;
+    private ?bool $isActive;
     private Role $idRole;
 
     // Constructeur
