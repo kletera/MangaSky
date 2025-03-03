@@ -60,14 +60,13 @@ if(isset($_POST['connexion'])){
                     $messageCo = "Erreur de Login et/ou de Mot de Passe !";
                 }else{
                     // If the passwords match, I save the user's data
-                    // Store user data in SESSION and display a confirmation message
+                    // Store user data in SESSION and send the user to his account
                     $_SESSION['id_Users'] = $data[0]['id_Users'];
                     $_SESSION['pseudo_Users'] = $data[0]['pseudo_Users'];
                     $_SESSION['mdp_Users'] = $data[0]['mdp_Users'];
                     $_SESSION['email_Users'] = $data[0]['email_Users'];
                     $_SESSION['img_Users'] = $data[0]['img_Users'];
-                    $_SESSION['id_Manga'] = $data[0]['id_Manga'];
-                    $_SESSION['id_User_Type'] = $data[0]['id_User_Type'];
+                    $_SESSION['id_Role'] = $data[0]['id_Role'];
                     
                     header('Location:/MangaSky/MonCompte');
                 }
